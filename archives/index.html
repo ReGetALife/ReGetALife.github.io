@@ -215,7 +215,7 @@ window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval);
 
 
 
-<div id="player1" class="aplayer"></div>
+
 
 
 
@@ -264,9 +264,47 @@ window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval);
         </div>
         
     </div>
+
+<div id="player1" class="aplayer"></div>
 </aside>
 
-
+<script src="/assets/js/APlayer.min.js"> </script>
+<script src="dist/APlayer.min.js"></script><!-- use your path -->
+<script>
+var ap = new APlayer({
+    element: document.getElementById('player1'),                       // Optional, player element
+    narrow: false,                                                     // Optional, narrow style
+    autoplay: true,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    showlrc: 3,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+    mutex: true,                                                       // Optional, pause other players when this player playing
+    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
+    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    listmaxheight: '513px',                                             // Optional, max height of play list
+    music: [
+    {                                          
+        title: '人情世故',                            
+        author: '杨千嬅',             
+        url: '/music/人情世故.mp3', 
+        pic: '/music/人情世故.jpg',
+        lrc: '/music/人情世故.lrc'
+    },
+    {                                          
+        title: '沙龙',                            
+        author: '陈奕迅',             
+        url: '/music/沙龙.mp3', 
+        pic: '/music/沙龙.jpg',
+        lrc: '/music/沙龙.lrc'
+    },
+    {                                          
+        title: 'Victory Rose',                            
+        author: 'Lights & Motion',             
+        url: '/music/Victory Rose.mp3'
+    }
+    ]
+});
+var ap = new APlayer(option);
+</script>
 
             
             <section id="main"><div class="timeline timeline-wrap">
@@ -404,43 +442,7 @@ window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval);
  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 
-<script src="/assets/js/APlayer.min.js"> </script>
-<script src="dist/APlayer.min.js"></script><!-- use your path -->
-<script>
-var ap = new APlayer({
-    element: document.getElementById('player1'),                       // Optional, player element
-    narrow: false,                                                     // Optional, narrow style
-    autoplay: true,                                                    // Optional, autoplay song(s), not supported by mobile browsers
-    showlrc: 3,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
-    mutex: true,                                                       // Optional, pause other players when this player playing
-    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
-    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
-    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
-    listmaxheight: '513px',                                             // Optional, max height of play list
-    music: [
-    {                                          
-        title: '人情世故',                            
-        author: '杨千嬅',             
-        url: '/music/人情世故.mp3', 
-        pic: '/music/人情世故.jpg',
-        lrc: '/music/人情世故.lrc'
-    },
-    {                                          
-        title: '沙龙',                            
-        author: '陈奕迅',             
-        url: '/music/沙龙.mp3', 
-        pic: '/music/沙龙.jpg',
-        lrc: '/music/沙龙.lrc'
-    },
-    {                                          
-        title: 'Victory Rose',                            
-        author: 'Lights & Motion',             
-        url: '/music/Victory Rose.mp3'
-    }
-    ]
-});
-var ap = new APlayer(option);
-</script>
+
         
     
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2139913"></script>

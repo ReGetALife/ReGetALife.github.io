@@ -686,8 +686,6 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 
             
     
-        <a href="http://solidays.tk/2017/08/02/有哪些优秀且免费的云存储服务？/#comments" class="article-comment-link">评论</a>
-    
 
         </footer>
     </div>
@@ -711,7 +709,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     
     
         <section id="comments">
-    <div id="uyan_frame"></div>
+	<div id="gitalk-container"></div>
 </section>
     
 
@@ -825,6 +823,10 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
                         <a href="https://console.qcloud.com/cos">myqcloud</a>
                     </li>
                 
+                    <li>
+                        <a href="http://www.yyyweb.com/front">前端里</a>
+                    </li>
+                
             </ul>
         </div>
     </div>
@@ -850,8 +852,20 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 
         
     
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2139913"></script>
-
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+	<script>
+		var gitalk = new Gitalk({
+                        clientID: 'b44b6c8317da8cadf857#your client ID',
+                        clientSecret: '2cf75aec4ff84330e40cb28394e06764cb2e9742#your client secret',
+			repo: 'ReGetALife.github.io#the repo to store comments',
+			owner: 'ReGetALife#your github ID',
+                        admin: ['ReGetALife'],
+                        distractionFreeMode: true
+		})
+		gitalk.render('gitalk-container')
+	</script>
+	
 
 
 

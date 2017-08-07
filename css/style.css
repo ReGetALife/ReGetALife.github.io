@@ -1188,7 +1188,7 @@ a.article-title:hover {
 .article-share-facebook,
 .article-share-pinterest,
 .article-share-google {
-  width: 50px;
+  width: 100px;
   height: 36px;
   display: block;
   float: left;

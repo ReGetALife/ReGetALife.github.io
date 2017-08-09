@@ -1,4 +1,4 @@
-<script src="/assets/js/APlayer.min.js"> </script>// when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
+// when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
 // not supported in all browsers though and sometimes needs a prefix, so we need a shim
 window.requestAnimFrame = ( function() {
 	return window.requestAnimationFrame ||
@@ -170,7 +170,68 @@ Particle.prototype.update = function( index ) {
 	this.alpha -= this.decay;
 	
 	// remove the particle once the alpha is low enough, based on the passed in index
-	if( this.alpha <= 0="" 1="" 360="" this.decay="" )="" {="" particles.splice(="" index,="" );="" }="" draw="" particle="" particle.prototype.draw="function()" ctx.="" beginpath();="" move="" to="" the="" last="" tracked="" coordinates="" in="" set,="" then="" a="" line="" current="" x="" and="" y="" ctx.moveto(="" this.coordinates[="" this.coordinates.length="" -="" ][="" ],="" ]="" ctx.lineto(="" this.x,="" this.y="" ctx.strokestyle="hsla(" +="" this.hue="" ',="" 100%,="" '="" this.brightness="" '%,="" this.alpha="" ')';="" ctx.stroke();="" create="" group="" explosion="" function="" createparticles(="" x,="" increase="" count="" for="" bigger="" explosion,="" beware="" of="" canvas="" performance="" hit="" with="" increased="" particles="" though="" var="" particlecount="30;" while(="" particlecount--="" particles.push(="" new="" particle(="" main="" demo="" loop loop()="" this="" will="" run="" endlessly="" requestanimationframe="" requestanimframe(="" hue="" get="" different="" colored="" fireworks="" over="" time="" random="" color="" normally,="" clearrect()="" would="" be="" used="" clear="" we="" want="" trailing="" effect="" setting="" composite="" operation="" destination-out="" allow="" us="" at="" specific="" opacity,="" rather="" than="" wiping="" it="" entirely="" ctx.globalcompositeoperation="destination-out" ;="" decrease="" alpha="" property="" more="" prominent="" trails="" ctx.fillstyle="rgba(0, 0, 0, 0.5)" ctx.fillrect(="" 0,="" cw,="" ch="" change="" back="" our="" mode="" lighter="" creates="" bright="" highlight="" points="" as="" overlap="" each="" other="" firework,="" it,="" update="" i="fireworks.length;" i--="" fireworks[="" ].draw();="" ].update(="" particle,="" particles[="" launch="" automatically="" coordinates,="" when="" mouse="" isn't="" down="" if(="" timertick="">= timerTotal ) {
+	if( this.alpha <= this.decay ) {
+		particles.splice( index, 1 );
+	}
+}
+
+// draw particle
+Particle.prototype.draw = function() {
+	ctx. beginPath();
+	// move to the last tracked coordinates in the set, then draw a line to the current x and y
+	ctx.moveTo( this.coordinates[ this.coordinates.length - 1 ][ 0 ], this.coordinates[ this.coordinates.length - 1 ][ 1 ] );
+	ctx.lineTo( this.x, this.y );
+	ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
+	ctx.stroke();
+}
+
+// create particle group/explosion
+function createParticles( x, y ) {
+	// increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
+	var particleCount = 30;
+	while( particleCount-- ) {
+		particles.push( new Particle( x, y ) );
+	}
+}
+
+// main demo loop
+function loop() {
+	// this function will run endlessly with requestAnimationFrame
+	requestAnimFrame( loop );
+	
+	// increase the hue to get different colored fireworks over time
+	//hue += 0.5;
+  
+  // create random color
+  hue= random(0, 360 );
+	
+	// normally, clearRect() would be used to clear the canvas
+	// we want to create a trailing effect though
+	// setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
+	ctx.globalCompositeOperation = 'destination-out';
+	// decrease the alpha property to create more prominent trails
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+	ctx.fillRect( 0, 0, cw, ch );
+	// change the composite operation back to our main mode
+	// lighter creates bright highlight points as the fireworks and particles overlap each other
+	ctx.globalCompositeOperation = 'lighter';
+	
+	// loop over each firework, draw it, update it
+	var i = fireworks.length;
+	while( i-- ) {
+		fireworks[ i ].draw();
+		fireworks[ i ].update( i );
+	}
+	
+	// loop over each particle, draw it, update it
+	var i = particles.length;
+	while( i-- ) {
+		particles[ i ].draw();
+		particles[ i ].update( i );
+	}
+	
+	// launch fireworks automatically to random coordinates, when the mouse isn't down
+	if( timerTick >= timerTotal ) {
 		if( !mousedown ) {
 			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
 			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
@@ -211,4 +272,4 @@ canvas.addEventListener( 'mouseup', function( e ) {
 });
 
 // once the window loads, we are ready for some fireworks!
-window.onload = loop;</=>
+window.onload = loop;

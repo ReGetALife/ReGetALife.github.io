@@ -308,17 +308,20 @@
     <link href="http://solidays.tk/2017/07/25/hello-world/"/>
     <id>http://solidays.tk/2017/07/25/hello-world/</id>
     <published>2017-07-24T16:51:23.704Z</published>
-    <updated>2017-08-09T06:43:20.053Z</updated>
+    <updated>2017-08-09T07:17:47.199Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>烟火<br> <a id="more"></a></p>
-<p><link rel="stylesheet" href="http://www.3gcs.com/css/style.css"></p>
-<p><canvas id="canvas">Canvas is not supported in your browser.</canvas></p>
-<script src="http://www.3gcs.com/js/index.js"></script>
-]]></content>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script> <a id="more"></a>
+<!--
+<link rel="stylesheet" href="http://www.3gcs.com/css/style.css">
+<canvas id="canvas">Canvas is not supported in your browser.</canvas>
+<script src="js/fireworks.js"></script> -->]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;烟火&lt;br&gt;
+      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt; &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;!--
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://www.3gcs.com/css/style.css&quot;&gt;
+&lt;
     
     </summary>
     

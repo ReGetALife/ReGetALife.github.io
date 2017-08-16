@@ -200,11 +200,11 @@ var hour=Math.floor((leftsecond-day1*24*60*60)/3600);
 var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
 var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
 var cc = document.getElementById(divname); 
-cc.innerHTML = "🕤 "+day1+"天"+hour+"小时"+minute+"分"+second+"秒";
+cc.innerHTML = day1+"天"+hour+"小时"+minute+"分"+second+"秒";
 } 
 window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval); 
 </script> 
-            <center id="divdown1"></center>
+             <center><i class="fa fa-clock-o fa-lg"></i> <span  id="divdown1"></span></center>
 <br>
 
 
@@ -225,11 +225,11 @@ window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval);
         <div class="article-info profile-block">
             <div class="article-info-block">
                 3
-                <span>📝文章</span>
+                <span> <i class="fa fa-file-text-o"></i> 文章</span>
             </div>
             <div class="article-info-block">
                 3
-                <span>📌标签</span>
+                <span> <i class="fa fa-tags"></i> 标签</span>
             </div>
         </div>
         

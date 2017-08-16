@@ -200,7 +200,6 @@ code {
 @media screen and (min-width: 560px) and (max-width: 799px) {
   #main {
     width: 100%;
-    background: #fff;
   }
 }
 #main #sidebar {
@@ -1698,9 +1697,6 @@ ol.toc {
 #footer-info {
   line-height: 1.6em;
   font-size: 0.85em;
-}
-#sidebar {
-  display: none;
 }
 @media screen and (min-width: 1200px) {
   #sidebar {

@@ -457,8 +457,48 @@ var ap = new APlayer(option);
 
             </footer>
         
-
     </div>
+
+
+
+
+
+
+    
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+     
+            <div>您的支持将鼓励我继续创作！</div>
+ <br>   
+            <button id="rewardButton" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" disable="enable">
+
+               <img src="/css/images/赏.png">
+            </button>
+            <div id="QR" style="display: none;">
+                <div style="display: inline-block">
+                    <a>
+                        <img src="/css/images/weixin.jpg">
+                    </a>
+                    <p>微信打赏</p>
+                </div>
+
+                <div style="display: inline-block">
+                    <a>
+                        <img src="/css/images/zhifubao.jpg">
+                    </a>
+
+                    <p>支付宝打赏</p>
+                </div>
+            </div>
+        </div>
+    
+      
+        
+                 
+
+
+
+
+
     
         
 <nav id="article-nav">
@@ -485,7 +525,55 @@ var ap = new APlayer(option);
 
 
 
-</section>
+
+
+
+
+
+
+
+
+
+<style>
+#rewardButton {
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0;
+	letter-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+}
+#QR {
+	padding-top: 20px;
+}
+
+#QR img {
+	width: 180px;
+	max-width: 100%;
+	display: inline-block;
+	margin: .8em 2em 0;
+}
+#rewardButton img {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	font-weight: 400;
+	font-style: normal;
+	font-variant: normal;
+	font-stretch: normal;
+	font-size: 18px;
+	font-family: "Microsoft Yahei";
+	background: #b9dff3
+}
+#rewardButton img:hover {
+	background: #f39a75
+}
+</style></section>
             
                 
 <aside id="sidebar">
@@ -634,18 +722,21 @@ var ap = new APlayer(option);
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
+            Copyright &copy; 2017 Solidays
+            <br>
             <span id="busuanzi_container_site_uv">
                 <i class="fa fa-user"></i>
                 <span id="busuanzi_value_site_uv"></span>
-            </span>  |  
+            </span>
+            <i>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</i>
             <span id="busuanzi_container_site_pv">
                 <i class="fa fa-eye"></i>
                 <span id="busuanzi_value_site_pv"></span>
             </span>
-            <br>
-            Copyright &copy; 2017 Solidays
+<!--
             <br>
             Powered by <a href="http://hexo.io/" target="_blank" style="text-decoration:none;">Hexo</a> & Base on <a target="_blank" href="https://github.com/ppoffice/hexo-theme-icarus" style="text-decoration:none;">Icarus</a>
+-->
         </div>
     </div>
 </footer>

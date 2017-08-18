@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2017-08-18T01:01:25.500Z</updated>
+  <updated>2017-08-18T08:35:45.385Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -16,11 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>emoji cheat sheet</title>
-    <link href="http://solidays.tk/2017/08/10/emoji-cheat-sheet/"/>
-    <id>http://solidays.tk/2017/08/10/emoji-cheat-sheet/</id>
+    <title>Add Donation to your Site</title>
+    <link href="http://solidays.tk/2017/08/18/Add-Donation-to-your-Site/"/>
+    <id>http://solidays.tk/2017/08/18/Add-Donation-to-your-Site/</id>
+    <published>2017-08-18T04:50:13.000Z</published>
+    <updated>2017-08-18T08:35:45.385Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="如何给自己的网站添加打赏">如何给自己的网站添加打赏😆</span></h3><p>许多的原创内容的网站尤其是博客都有打赏的功能，下面介绍如何添加简单的打赏按钮<br><a id="more"></a><br>借助hexo建站的网站，并且使用的是NexT主题，主题本身已经自带了打赏功能，参照主题文档开启即可，不再赘述。</p>
+<p>其他网站仅需简单两步即可引入打赏：</p>
+<ul>
+<li><p>在文章布局的尾部插入如下代码块(hexo中直接添加进/blog/themes/…/layout/…/article.ejs文件中)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"padding: 10px 0; margin: 20px auto; width: 90%; text-align: center"</span>&gt;</span></div><div class="line">     </div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>您的支持将鼓励我继续创作！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span>   </div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rewardButton"</span> <span class="attr">onclick</span>=<span class="string">"var qr = document.getElementById('QR'); if (qr.style.display === 'none') &#123;qr.style.display='block';&#125; else &#123;qr.style.display='none'&#125;"</span> <span class="attr">disable</span>=<span class="string">"enable"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"按钮图片路径"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"QR"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display: inline-block"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"支付宝收款二维码路径"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>支付宝打赏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display: inline-block"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"微信收款二维码路径"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>微信打赏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display: inline-block"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"QQ收款二维码路径"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>QQ打赏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>引入简单的样式文件(hexo中可直接加进/blog/themes/…/layout/…/article.ejs文件末尾)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">#rewardButton &#123;</div><div class="line">	width: 40px;</div><div class="line">	height: 40px;</div><div class="line">	cursor: pointer;</div><div class="line">	border: 0;</div><div class="line">	outline: 0;</div><div class="line">	border-radius: 100%;</div><div class="line">	padding: 0;</div><div class="line">	margin: 0;</div><div class="line">&#125;</div><div class="line">#QR &#123;</div><div class="line">	padding-top: 20px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#QR img &#123;</div><div class="line">	width: 120px;</div><div class="line">        max-width: 100%;</div><div class="line"></div><div class="line">        margin: .8em 2em 0;</div><div class="line">&#125;</div><div class="line">#rewardButton img &#123;</div><div class="line">	display: inline-block;</div><div class="line">	width: 40px;</div><div class="line">	height: 40px;</div><div class="line">	border-radius: 5px;</div><div class="line">	background: #b9dff3;</div><div class="line">&#125;</div><div class="line">#rewardButton img:hover &#123;</div><div class="line">	background: #f39a75;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<p>大功告成辣。效果请看文章下方的打赏按钮。</p>
+<h4><span id="欢迎打赏3_ヽ_">欢迎打赏(:3_ヽ)_</span></h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;如何给自己的网站添加打赏😆&quot;&gt;&lt;a href=&quot;#如何给自己的网站添加打赏😆&quot; class=&quot;headerlink&quot; title=&quot;如何给自己的网站添加打赏😆&quot;&gt;&lt;/a&gt;如何给自己的网站添加打赏😆&lt;/h3&gt;&lt;p&gt;许多的原创内容的网站尤其是博客都有打赏的功能，下面介绍如何添加简单的打赏按钮&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Web开发" scheme="http://solidays.tk/categories/Web%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Hexo" scheme="http://solidays.tk/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Emoji Cheat Sheet</title>
+    <link href="http://solidays.tk/2017/08/10/Emoji-Cheat-Sheet/"/>
+    <id>http://solidays.tk/2017/08/10/Emoji-Cheat-Sheet/</id>
     <published>2017-08-10T04:16:20.000Z</published>
-    <updated>2017-08-18T01:01:25.500Z</updated>
+    <updated>2017-08-18T04:52:11.032Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt=":octocat:"></p>
 <h1><span id="some-emojis-supported-on-github">Some emojis supported on Github:</span></h1><h2><span id="people">People</span></h2><p>😄😆😊😃☺️😏😍😘😚😳😌😆😁😉😜😝😀😗😙<br>😛😴😟😦😧😮😬😕😯😑😒😅😓😥😩😔😞😖😨<br>😰😣😢😭😂😲😱😫😠😡😤😪😋😷😎😵👿😈😐<br>😶😇👽💛💙💜  ❤️  💚💔💓💗💕💞💘💖✨⭐️🌟💫<br>💥💥💢❗️❓❕❔💤💨💦🎶🎵🔥💩💩💩👍👍👎<br>👎👌👊👊✊✌️👋✋✋👐☝️👇👈👉🙌🙏👆👏💪<br>🤘🖕🏃🏃👫👪👬👭💃👯🙆🙅💁🙋👰🙎🙍🙇💑<br>💆💇💅👦👧👩👨👶👵👴👱👲👳👷👮👼👸😺😸<br>😻😽😼🙀😿😹😾👹👺🙈🙉🙊💂💀🐾👄💋💧👂<br>👀👃👅💌👤👥💬💭<br><a id="more"></a></p>

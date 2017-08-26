@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2017-08-21T16:30:54.821Z</updated>
+  <updated>2017-08-26T08:38:34.335Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://solidays.tk/2017/08/18/Add-Donation-to-your-Site/"/>
     <id>http://solidays.tk/2017/08/18/Add-Donation-to-your-Site/</id>
     <published>2017-08-18T04:50:13.000Z</published>
-    <updated>2017-08-21T16:30:54.821Z</updated>
+    <updated>2017-08-26T08:38:34.335Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="如何给自己的网站添加打赏">如何给自己的网站添加打赏😆</span></h3><a id="more"></a>
 <p>许多的原创内容的网站尤其是博客都有打赏的功能，下面介绍如何添加简单的打赏按钮<br>借助hexo建站的网站，并且使用的是NexT主题，主题本身已经自带了打赏功能，参照主题文档开启即可，不再赘述。</p>

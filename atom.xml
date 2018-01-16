@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2018-01-16T14:28:47.062Z</updated>
+  <updated>2018-01-16T14:40:00.717Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -17,17 +17,17 @@
   
   <entry>
     <title>How to Win Your Friends in Wechat Jump</title>
-    <link href="http://solidays.tk/2018/01/16/How%20to%20Win%20Your%20Friends%20in%20Wechat%20Jump/"/>
-    <id>http://solidays.tk/2018/01/16/How to Win Your Friends in Wechat Jump/</id>
-    <published>2018-01-16T08:29:48.000Z</published>
-    <updated>2018-01-16T14:28:47.062Z</updated>
+    <link href="http://solidays.tk/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/"/>
+    <id>http://solidays.tk/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/</id>
+    <published>2018-01-16T14:37:31.000Z</published>
+    <updated>2018-01-16T14:40:00.717Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>近来微信推出的小程序跳一跳着实在朋友圈火了一把，然而作为手残党的我只能望着好友排行榜上四五百的成绩黯然神伤。偶然发现了GitHub上的跳一跳开挂项目，试了一下效果甚好。</p>
 <a id="more"></a>
 <blockquote>
 <p>2017 年 12 月 28 日下午，微信发布了 6.6.1 版本，加入了「小游戏」功能，并提供了官方 DEMO「跳一跳」。这是一个 2.5D 插画风格的益智游戏，玩家可以通过按压屏幕时间的长短来控制这个「小人」跳跃的距离。<strong>如果能利用图像识别精确测量出起始和目标点之间测距离，就可以估计按压的时间来精确跳跃。</strong></p>
 </blockquote>
-<p>GitHub上的跳一跳辅助项目在<a href="https://github.com/wangshub/wechat_jump_game" target="_blank" rel="external">这里</a>。（温馨提示：腾讯的程序员显然也在持续关注这个项目，因此因此被官方识别出开挂而失去分数的可能性还是存在的。）</p>
+<p>GitHub上的跳一跳辅助项目在<a href="https://github.com/wangshub/wechat_jump_game" target="_blank" rel="external">这里</a>。（温馨提示：腾讯的程序员显然也在持续关注这个项目，因此被官方识别出开挂而失去分数的可能性还是存在的。）</p>
 <p>下面介绍如何在利用该项目称霸好友榜。我是在win10上操纵安卓设备，其他设备的请自行<a href="https://github.com/wangshub/wechat_jump_game/wiki" target="_blank" rel="external">查阅文档</a>。</p>
 <h4><span id="搭建python环境">搭建python环境</span></h4><p>自行百度安装即可。我安装的是python2.7.13。安装完成后还需要添加<strong>环境变量</strong> ：在文件资源管理器-&gt;此电脑（右键）-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;系统变量，找到<code>path</code>变量，添加python的安装路径，例如<code>C:\Python27</code> 。之后打开<code>cmd</code>输入python显示出版本号说明已经成功配置。</p>
 <h4><span id="搭建adb环境">搭建ADB环境</span></h4><p>直接在<a href="https://adb.clockworkmod.com/" target="_blank" rel="external">这里</a>下载安装即可。安装完成后同样要添加<strong>环境变量</strong>，方法同上（安装路径类似<code>C:\Program Files (x86)\ClockworkMod\Universal Adb Driver</code>）。之后打开<code>cmd</code>输入adb显示出大量文字说明已经成功配置。</p>

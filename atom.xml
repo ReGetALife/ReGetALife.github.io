@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2018-01-16T14:40:00.717Z</updated>
+  <updated>2018-05-11T17:13:53.646Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introduction to Qt Creater</title>
+    <link href="http://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/"/>
+    <id>http://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/</id>
+    <published>2018-05-11T15:41:17.000Z</published>
+    <updated>2018-05-11T17:13:53.646Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="背景">背景</span></h3><p>​        最近操作系统项目要求做一个电梯调度程序，周围同学有的使用Java+Swing，有的使用Js，而我打算使用C++。第一次做有GUI的软件，上网搜索一番后发现了Qt这个工具，评价颇高。</p>
+<a id="more"></a>
+<h3><span id="下载安装">下载安装</span></h3><p>​        幸运的找到了<a href="http://www.qter.org" target="_blank" rel="external">Qt开源社区</a>，上面有很多关于这个工具的资源。下载安装以及初步的学习推荐<a href="http://www.qter.org/portal.php?mod=view&amp;aid=26" target="_blank" rel="external">此教程</a>。值得注意的是，直接在官网上下载安装包是需要注册的，而使用<a href="https://download.qt.io/official_releases/qt/5.8/5.8.0/" target="_blank" rel="external">资源下载页面</a>的链接可以绕过注册直接下载，链接如下：</p>
+<p><a href="https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-android-5.8.0.exe" target="_blank" rel="external">https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-android-5.8.0.exe</a></p>
+<p>文件很大，推荐使用迅雷下载，速度很快。</p>
+<p>或者，qt-opensource-windows-x86-android-5.8.0.exe的百度网盘（密码：vr6h）：</p>
+<p><a href="https://pan.baidu.com/s/1pvm38_Mk9CnE3VQtBRqeLw" target="_blank" rel="external">https://pan.baidu.com/s/1pvm38_Mk9CnE3VQtBRqeLw</a></p>
+<p>​        安装后界面如banner所示。共有六个模式，其中的设计模式可以方便的对UI进行可视化设计，简单了解即可上手。</p>
+<h3><span id="通信机制">通信机制</span></h3><p>​        Qt有一套自己的通信机制，涉及到三个关键字：字：<code>signal</code>，<code>slot</code>，<code>emit</code>。</p>
+<ul>
+<li><p><strong>signal</strong>（信号）</p>
+<p>被声明为<code>signal</code>的函数用来发射信号，信号可以被槽函数（被声明为<code>slot</code>的函数）接收并触发槽函数。</p>
+</li>
+<li><p><strong>slot</strong>（槽）</p>
+<p>被声明为<code>slot</code>的函数可以接受信号函数的信号，值得注意的是，信号和槽之间的对应关系一对多或者多对一都可以，信号没有槽接收也是允许的。信号和槽之间的联系通过<code>connect</code>方法实现，如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">connect(pointer1, SIGNAL(signalFun(<span class="keyword">int</span>)), pointer2, SLOT(slotFun(<span class="keyword">int</span>)));</div></pre></td></tr></table></figure>
+<p>上述语句将<code>pointer1</code>所指向的类中的成员信号函数<code>signalFun</code>与<code>pointer2</code>所指向的类中的成员槽函数<code>slotFun</code>相关联。槽函数除了可以与信号关联，与普通的函数没有什么区别。<strong>注意</strong>只有继承于Qt中的定义了信号的类或子类的类的成员函数才能与信号关联，也就是说非类的成员函数是显然不能与信号关联的。</p>
+</li>
+<li><p><strong>emit</strong>（释放信号）</p>
+<p>用于释放一个信号。如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function">emit <span class="title">signalFun</span><span class="params">(a)</span></span>;<span class="comment">//a is an int</span></div></pre></td></tr></table></figure>
+<p>上述语句释放了一个<code>signalFun</code>信号，并且携带了参数a，与之关联的槽函数可以收到信号和参数并被触发。当然信号函数也可以不带任何参数。</p>
+</li>
+</ul>
+<p>​        这套机制有许多优点，它可以在不同的类甚至不同的线程之间进行使用，异常灵活。这对于多线程之间的通讯非常有用。并且它是类型安全的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;​        最近操作系统项目要求做一个电梯调度程序，周围同学有的使用Java+Swing，有的使用Js，而我打算使用C++。第一次做有GUI的软件，上网搜索一番后发现了Qt这个工具，评价颇高。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="软件开发" scheme="http://solidays.tk/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Qt" scheme="http://solidays.tk/tags/Qt/"/>
+    
+      <category term="多线程" scheme="http://solidays.tk/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="GUI" scheme="http://solidays.tk/tags/GUI/"/>
+    
+  </entry>
   
   <entry>
     <title>How to Win Your Friends in Wechat Jump</title>

@@ -775,6 +775,7 @@ var ap = new APlayer(option);
 			repo: 'ReGetALife.github.io',
 			owner: 'ReGetALife',
                         admin: ['ReGetALife'],
+			id: md5(window.location.pathname),
                         distractionFreeMode: true
 		})
 		gitalk.render('gitalk-container')

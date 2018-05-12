@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2018-05-12T06:59:56.123Z</updated>
+  <updated>2018-05-12T07:24:15.023Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSL supported</title>
+    <link href="http://solidays.tk/2018/05/12/SSL-supported/"/>
+    <id>http://solidays.tk/2018/05/12/SSL-supported/</id>
+    <published>2018-05-12T07:10:46.000Z</published>
+    <updated>2018-05-12T07:24:15.023Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="note">NOTE:</span></h3><p>即日起本站全面支持SSL协议。<a href="https://www.cloudflare.com" target="_blank" rel="external">CloudFlare</a>提供支持。</p>
+<a id="more"></a>
+<p>今后本站不再引入http数据，但可能以链接形式给出。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;NOTE&quot;&gt;&lt;a href=&quot;#NOTE&quot; class=&quot;headerlink&quot; title=&quot;NOTE:&quot;&gt;&lt;/a&gt;NOTE:&lt;/h3&gt;&lt;p&gt;即日起本站全面支持SSL协议。&lt;a href=&quot;https://www.cloudflare.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CloudFlare&lt;/a&gt;提供支持。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Note" scheme="http://solidays.tk/categories/Note/"/>
+    
+    
+      <category term="SSL" scheme="http://solidays.tk/tags/SSL/"/>
+    
+  </entry>
   
   <entry>
     <title>Introduction to Qt Creater</title>

@@ -4,9 +4,9 @@
   <subtitle>Solidays</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://solidays.tk/"/>
-  <updated>2018-05-11T17:13:53.646Z</updated>
-  <id>http://solidays.tk/</id>
+  <link href="https://solidays.tk/"/>
+  <updated>2018-05-12T06:23:59.232Z</updated>
+  <id>https://solidays.tk/</id>
   
   <author>
     <name>Solidays</name>
@@ -17,14 +17,14 @@
   
   <entry>
     <title>Introduction to Qt Creater</title>
-    <link href="http://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/"/>
-    <id>http://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/</id>
+    <link href="https://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/"/>
+    <id>https://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/</id>
     <published>2018-05-11T15:41:17.000Z</published>
-    <updated>2018-05-11T17:13:53.646Z</updated>
+    <updated>2018-05-12T06:23:59.232Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="背景">背景</span></h3><p>​        最近操作系统项目要求做一个电梯调度程序，周围同学有的使用Java+Swing，有的使用Js，而我打算使用C++。第一次做有GUI的软件，上网搜索一番后发现了Qt这个工具，评价颇高。</p>
 <a id="more"></a>
-<h3><span id="下载安装">下载安装</span></h3><p>​        幸运的找到了<a href="http://www.qter.org" target="_blank" rel="external">Qt开源社区</a>，上面有很多关于这个工具的资源。下载安装以及初步的学习推荐<a href="http://www.qter.org/portal.php?mod=view&amp;aid=26" target="_blank" rel="external">此教程</a>。值得注意的是，直接在官网上下载安装包是需要注册的，而使用<a href="https://download.qt.io/official_releases/qt/5.8/5.8.0/" target="_blank" rel="external">资源下载页面</a>的链接可以绕过注册直接下载，链接如下：</p>
+<h3><span id="下载安装">下载安装</span></h3><p>​        幸运的找到了<a href="//www.qter.org">Qt开源社区</a>，上面有很多关于这个工具的资源。下载安装以及初步的学习推荐<a href="//www.qter.org/portal.php?mod=view&amp;aid=26">此教程</a>。值得注意的是，直接在官网上下载安装包是需要注册的，而使用<a href="https://download.qt.io/official_releases/qt/5.8/5.8.0/" target="_blank" rel="external">资源下载页面</a>的链接可以绕过注册直接下载，链接如下：</p>
 <p><a href="https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-android-5.8.0.exe" target="_blank" rel="external">https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-android-5.8.0.exe</a></p>
 <p>文件很大，推荐使用迅雷下载，速度很快。</p>
 <p>或者，qt-opensource-windows-x86-android-5.8.0.exe的百度网盘（密码：vr6h）：</p>
@@ -55,21 +55,21 @@
     
     </summary>
     
-      <category term="软件开发" scheme="http://solidays.tk/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+      <category term="软件开发" scheme="https://solidays.tk/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="Qt" scheme="http://solidays.tk/tags/Qt/"/>
+      <category term="Qt" scheme="https://solidays.tk/tags/Qt/"/>
     
-      <category term="多线程" scheme="http://solidays.tk/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="https://solidays.tk/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="GUI" scheme="http://solidays.tk/tags/GUI/"/>
+      <category term="GUI" scheme="https://solidays.tk/tags/GUI/"/>
     
   </entry>
   
   <entry>
     <title>How to Win Your Friends in Wechat Jump</title>
-    <link href="http://solidays.tk/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/"/>
-    <id>http://solidays.tk/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/</id>
+    <link href="https://solidays.tk/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/"/>
+    <id>https://solidays.tk/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/</id>
     <published>2018-01-16T14:37:31.000Z</published>
     <updated>2018-01-16T14:40:00.717Z</updated>
     
@@ -104,17 +104,17 @@
     
     </summary>
     
-      <category term="开挂" scheme="http://solidays.tk/categories/%E5%BC%80%E6%8C%82/"/>
+      <category term="开挂" scheme="https://solidays.tk/categories/%E5%BC%80%E6%8C%82/"/>
     
     
-      <category term="跳一跳" scheme="http://solidays.tk/tags/%E8%B7%B3%E4%B8%80%E8%B7%B3/"/>
+      <category term="跳一跳" scheme="https://solidays.tk/tags/%E8%B7%B3%E4%B8%80%E8%B7%B3/"/>
     
   </entry>
   
   <entry>
     <title>Add Donation to your Site</title>
-    <link href="http://solidays.tk/2017/08/18/Add-Donation-to-your-Site/"/>
-    <id>http://solidays.tk/2017/08/18/Add-Donation-to-your-Site/</id>
+    <link href="https://solidays.tk/2017/08/18/Add-Donation-to-your-Site/"/>
+    <id>https://solidays.tk/2017/08/18/Add-Donation-to-your-Site/</id>
     <published>2017-08-18T04:50:13.000Z</published>
     <updated>2017-08-26T08:38:34.335Z</updated>
     
@@ -140,17 +140,17 @@
     
     </summary>
     
-      <category term="Web开发" scheme="http://solidays.tk/categories/Web%E5%BC%80%E5%8F%91/"/>
+      <category term="Web开发" scheme="https://solidays.tk/categories/Web%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="Hexo" scheme="http://solidays.tk/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://solidays.tk/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>emoji cheat sheet</title>
-    <link href="http://solidays.tk/2017/08/10/emoji-cheat-sheet/"/>
-    <id>http://solidays.tk/2017/08/10/emoji-cheat-sheet/</id>
+    <link href="https://solidays.tk/2017/08/10/emoji-cheat-sheet/"/>
+    <id>https://solidays.tk/2017/08/10/emoji-cheat-sheet/</id>
     <published>2017-08-10T04:16:20.000Z</published>
     <updated>2018-01-19T03:54:03.987Z</updated>
     
@@ -170,19 +170,19 @@
     
     </summary>
     
-      <category term="resources" scheme="http://solidays.tk/categories/resources/"/>
+      <category term="resources" scheme="https://solidays.tk/categories/resources/"/>
     
     
-      <category term="emoji" scheme="http://solidays.tk/tags/emoji/"/>
+      <category term="emoji" scheme="https://solidays.tk/tags/emoji/"/>
     
   </entry>
   
   <entry>
     <title>有哪些优秀且免费的云存储服务？</title>
-    <link href="http://solidays.tk/2017/08/02/%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%A7%80%E4%B8%94%E5%85%8D%E8%B4%B9%E7%9A%84%E4%BA%91%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1%EF%BC%9F/"/>
-    <id>http://solidays.tk/2017/08/02/有哪些优秀且免费的云存储服务？/</id>
+    <link href="https://solidays.tk/2017/08/02/%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%A7%80%E4%B8%94%E5%85%8D%E8%B4%B9%E7%9A%84%E4%BA%91%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1%EF%BC%9F/"/>
+    <id>https://solidays.tk/2017/08/02/有哪些优秀且免费的云存储服务？/</id>
     <published>2017-08-02T13:12:36.000Z</published>
-    <updated>2017-08-21T16:30:23.167Z</updated>
+    <updated>2018-05-12T06:18:00.876Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
 <p>转载自知乎<a href="https://www.zhihu.com/question/51309695" target="_blank" rel="external">有哪些优秀且免费的云存储服务？</a></p>
@@ -227,7 +227,7 @@
 </ul>
 <ul>
 <li><p><strong>iCloud Drive</strong> - <a href="https://link.zhihu.com/?target=https%3A//www.icloud.com/%23iclouddrive" target="_blank" rel="external">https://www.icloud.com/#iclouddrive</a></p>
-<p>苹果的网盘<br>5G<br>单个文件限制15G<br><a href="https://link.zhihu.com/?target=http%3A//www.me.com" target="_blank" rel="external">http://www.me.com/</a> 可跳转到 <a href="https://link.zhihu.com/?target=http%3A//www.icloud.com" target="_blank" rel="external">iCloud.com</a></p>
+<p>苹果的网盘<br>5G<br>单个文件限制15G<br><a href="https://link.zhihu.com/?target=http%3A//www.me.com" target="_blank" rel="external">https://www.me.com/</a> 可跳转到 <a href="https://link.zhihu.com/?target=http%3A//www.icloud.com" target="_blank" rel="external">iCloud.com</a></p>
 <p><img src="/images/v2-8d7387bdcd472089410a6e46b3c13de3_b.jpg" alt=""></p>
 </li>
 </ul>
@@ -256,24 +256,24 @@
 </li>
 </ul>
 <ul>
-<li><p><strong>中国移动 和彩云</strong> - <a href="https://link.zhihu.com/?target=http%3A//caiyun.feixin.10086.cn/" target="_blank" rel="external">http://caiyun.feixin.10086.cn/</a></p>
+<li><p><strong>中国移动 和彩云</strong> - <a href="https://link.zhihu.com/?target=http%3A//caiyun.feixin.10086.cn/" target="_blank" rel="external">https://caiyun.feixin.10086.cn/</a></p>
 <p>16G-100G<br>单个文件限制4G</p>
 <p><img src="/images/v2-5ee3dbafd7e902bc2aa2b2a1078fcc7f_b.jpg" alt=""></p>
 </li>
 </ul>
 <ul>
-<li><p><strong>中国电信 天翼云盘</strong> - <a href="https://link.zhihu.com/?target=http%3A//cloud.189.cn/" target="_blank" rel="external">http://cloud.189.cn/</a></p>
+<li><p><strong>中国电信 天翼云盘</strong> - <a href="https://link.zhihu.com/?target=http%3A//cloud.189.cn/" target="_blank" rel="external">https://cloud.189.cn/</a></p>
 <p>10G-2T<br>单个文件限制2G<br>目前登陆移动App可扩容至2T</p>
 <p><img src="/images/v2-fc189b9666eddd1e592e3a11e29967ab_b.jpg" alt=""></p>
 </li>
 </ul>
 <ul>
-<li><p><strong>网易邮箱网盘</strong> - <a href="https://link.zhihu.com/?target=http%3A//mail.163.com/" target="_blank" rel="external">http://mail.163.com/</a></p>
+<li><p><strong>网易邮箱网盘</strong> - <a href="https://link.zhihu.com/?target=http%3A//mail.163.com/" target="_blank" rel="external">https://mail.163.com/</a></p>
 <p>2G-7G<br>单个文件限制1G<br>验证手机号可扩容到5G，开通随身邮（付费）可增加2G。<img src="/images/v2-ccf8364846df0a7b98d9502863511c38_b.jpg" alt=""></p>
 </li>
 </ul>
 <ul>
-<li><p><strong>京东云盘</strong> - <a href="https://link.zhihu.com/?target=http%3A//jbox.jcloud.com/" target="_blank" rel="external">http://jbox.jcloud.com/</a></p>
+<li><p><strong>京东云盘</strong> - <a href="https://link.zhihu.com/?target=http%3A//jbox.jcloud.com/" target="_blank" rel="external">https://jbox.jcloud.com/</a></p>
 <p>10G<br>单个文件限制1G</p>
 <p><img src="/images/v2-01a5216e16d0b7f5c66657c45b0bcb40_b.jpg" alt=""></p>
 </li>
@@ -303,7 +303,7 @@
 <p><img src="/images/v2-34ea5da257505ec691e3a96c25c2309f_b.jpg" alt=""></p>
 </li>
 <li><p><strong>网易蜂巢 NOS</strong> - <a href="https://link.zhihu.com/?target=https%3A//c.163.com/product/nos" target="_blank" rel="external">https://c.163.com/product/nos</a></p>
-<p>免费用户20G下载流量 - <a href="https://link.zhihu.com/?target=http%3A//support.c.163.com/md.html%23" target="_blank" rel="external">http://support.c.163.com/md.html#</a></p>
+<p>免费用户20G下载流量 - <a href="https://link.zhihu.com/?target=http%3A//support.c.163.com/md.html%23" target="_blank" rel="external">https://support.c.163.com/md.html#</a></p>
 <p><img src="/images/7f3f9baae58d796bd4e16b19a4efe648_b.jpg" alt=""></p>
 </li>
 <li><p><strong>腾讯云 COS</strong> - <a href="https://link.zhihu.com/?target=https%3A//www.qcloud.com/product/cos.html" target="_blank" rel="external">https://www.qcloud.com/product/cos.html</a></p>
@@ -367,7 +367,7 @@
 <li><p><strong>WPS云文档</strong> - <a href="https://link.zhihu.com/?target=https%3A//drive.wps.cn/landing.html" target="_blank" rel="external">https://drive.wps.cn/landing.html</a></p>
 <p><img src="/images/v2-e8e59f6b165b530b85d6c6b95f5d40ae_b.jpg" alt=""></p>
 </li>
-<li><p><strong>百度Doc</strong> - <a href="https://link.zhihu.com/?target=http%3A//word.baidu.com/" target="_blank" rel="external">http://word.baidu.com/</a></p>
+<li><p><strong>百度Doc</strong> - <a href="https://link.zhihu.com/?target=http%3A//word.baidu.com/" target="_blank" rel="external">https://word.baidu.com/</a></p>
 <p><img src="/images/v2-92b339e195ed906f402468673e008921_b.jpg" alt=""></p>
 </li>
 </ul>
@@ -388,11 +388,11 @@
 <li><p><strong>Imgur</strong> - <a href="https://link.zhihu.com/?target=https%3A//imgur.com/" target="_blank" rel="external">https://imgur.com/</a></p>
 <p><img src="/images/v2-c4f4300f74eac0d23afba1feec57ac54_b.jpg" alt=""></p>
 </li>
-<li><p><strong>新浪微博相册</strong> - <a href="https://link.zhihu.com/?target=http%3A//photo.weibo.com/" target="_blank" rel="external">http://photo.weibo.com/</a></p>
+<li><p><strong>新浪微博相册</strong> - <a href="https://link.zhihu.com/?target=http%3A//photo.weibo.com/" target="_blank" rel="external">https://photo.weibo.com/</a></p>
 <p>ww改成ws 可支持 Https</p>
 <p><img src="/images/453b9f69101904b2e7761169f4311589_b.jpg" alt=""></p>
 </li>
-<li><p><strong>网易Lofter</strong> - <a href="https://link.zhihu.com/?target=http%3A//www.lofter.com/" target="_blank" rel="external">http://www.lofter.com</a></p>
+<li><p><strong>网易Lofter</strong> - <a href="https://link.zhihu.com/?target=http%3A//www.lofter.com/" target="_blank" rel="external">https://www.lofter.com</a></p>
 <p><img src="/images/17eb22bd21bc00b662f27ed53b781391_b.jpg" alt=""></p>
 </li>
 </ul>
@@ -431,7 +431,7 @@
 </ul>
 <h2><span id="代码托管">代码托管</span></h2><ul>
 <li><p><strong>Github Pages</strong> - <a href="https://link.zhihu.com/?target=https%3A//pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a></p>
-<p>提供形似 <a href="https://link.zhihu.com/?target=http%3A//abc.github.io" target="_blank" rel="external">http://abc.github.io</a> 的二级域名，可绑定自己域名。</p>
+<p>提供形似 <a href="https://link.zhihu.com/?target=http%3A//abc.github.io" target="_blank" rel="external">https://abc.github.io</a> 的二级域名，可绑定自己域名。</p>
 <p><img src="/images/97ff49edcfc5d97c9ddea5dd6b23c706_b.jpg" alt=""></p>
 </li>
 <li><p><strong>Coding Pages</strong> - <a href="https://link.zhihu.com/?target=https%3A//coding.net/help/doc/pages/" target="_blank" rel="external">https://coding.net/help/doc/pages/</a></p>
@@ -439,7 +439,7 @@
 </li>
 </ul>
 <h2><span id="主机">主机</span></h2><ul>
-<li><p><strong>Hostinger 中国</strong> - <a href="https://link.zhihu.com/?target=http%3A//www.hostinger.com.hk/" target="_blank" rel="external">http://www.hostinger.com.hk/</a></p>
+<li><p><strong>Hostinger 中国</strong> - <a href="https://link.zhihu.com/?target=http%3A//www.hostinger.com.hk/" target="_blank" rel="external">https://www.hostinger.com.hk/</a></p>
 <p>不错的免费主机，支持PHP等动态网页，无广告，有网页版文件管理器，不用下载任何软件即可上传文件。</p>
 <p><img src="/images/v2-ed9eeea175223edb21b9a4ef9cf16fb2_b.jpg" alt=""></p>
 </li>
@@ -454,17 +454,17 @@
     
     </summary>
     
-      <category term="services" scheme="http://solidays.tk/categories/services/"/>
+      <category term="services" scheme="https://solidays.tk/categories/services/"/>
     
     
-      <category term="云存储" scheme="http://solidays.tk/tags/%E4%BA%91%E5%AD%98%E5%82%A8/"/>
+      <category term="云存储" scheme="https://solidays.tk/tags/%E4%BA%91%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://solidays.tk/2017/07/25/hello-world/"/>
-    <id>http://solidays.tk/2017/07/25/hello-world/</id>
+    <link href="https://solidays.tk/2017/07/25/hello-world/"/>
+    <id>https://solidays.tk/2017/07/25/hello-world/</id>
     <published>2017-07-24T16:51:23.704Z</published>
     <updated>2017-08-21T16:33:22.119Z</updated>
     
@@ -487,7 +487,7 @@
     </summary>
     
     
-      <category term="example" scheme="http://solidays.tk/tags/example/"/>
+      <category term="example" scheme="https://solidays.tk/tags/example/"/>
     
   </entry>
   

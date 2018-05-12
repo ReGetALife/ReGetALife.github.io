@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2018-05-12T06:23:59.232Z</updated>
+  <updated>2018-05-12T06:59:56.123Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/"/>
     <id>http://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/</id>
     <published>2018-05-11T15:41:17.000Z</published>
-    <updated>2018-05-12T06:23:59.232Z</updated>
+    <updated>2018-05-12T06:59:56.123Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="背景">背景</span></h3><p>​        最近操作系统项目要求做一个电梯调度程序，周围同学有的使用Java+Swing，有的使用Js，而我打算使用C++。第一次做有GUI的软件，上网搜索一番后发现了Qt这个工具，评价颇高。</p>
 <a id="more"></a>
-<h3><span id="下载安装">下载安装</span></h3><p>​        幸运的找到了<a href="//www.qter.org">Qt开源社区</a>，上面有很多关于这个工具的资源。下载安装以及初步的学习推荐<a href="//www.qter.org/portal.php?mod=view&amp;aid=26">此教程</a>。值得注意的是，直接在官网上下载安装包是需要注册的，而使用<a href="https://download.qt.io/official_releases/qt/5.8/5.8.0/" target="_blank" rel="external">资源下载页面</a>的链接可以绕过注册直接下载，链接如下：</p>
+<h3><span id="下载安装">下载安装</span></h3><p>​        幸运的找到了<a href="http://www.qter.org" target="_blank" rel="external">Qt开源社区</a>，上面有很多关于这个工具的资源。下载安装以及初步的学习推荐<a href="http://www.qter.org/portal.php?mod=view&amp;aid=26" target="_blank" rel="external">此教程</a>。值得注意的是，直接在官网上下载安装包是需要注册的，而使用<a href="https://download.qt.io/official_releases/qt/5.8/5.8.0/" target="_blank" rel="external">资源下载页面</a>的链接可以绕过注册直接下载，链接如下：</p>
 <p><a href="https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-android-5.8.0.exe" target="_blank" rel="external">https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-android-5.8.0.exe</a></p>
 <p>文件很大，推荐使用迅雷下载，速度很快。</p>
 <p>或者，qt-opensource-windows-x86-android-5.8.0.exe的百度网盘（密码：vr6h）：</p>

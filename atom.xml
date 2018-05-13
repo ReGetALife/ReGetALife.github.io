@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2018-05-12T07:24:15.023Z</updated>
+  <updated>2018-05-13T16:57:27.567Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Use your Chrome to visit Google</title>
+    <link href="http://solidays.tk/2018/05/14/Use-your-Chrome-to-visit-Google/"/>
+    <id>http://solidays.tk/2018/05/14/Use-your-Chrome-to-visit-Google/</id>
+    <published>2018-05-13T16:28:26.000Z</published>
+    <updated>2018-05-13T16:57:27.567Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="chrome浏览器">Chrome浏览器</span></h3><p>用过Chrome的人都说好。</p>
+<a id="more"></a>
+<p>个人觉得Chrome的界面干净清新，并且十分人性化。它对于开发者友好。它还有强大的插件，对，非常丰富的插件任你选择。在哪找呢？<a href="https://chrome.google.com/webstore/category/extensions" target="_blank" rel="external">这是</a>官方的Chrome应用商店。打不开吧？</p>
+<p>为了使用到应用商店里安全的插件，需要一些小技巧。</p>
+<h3><span id="科学上网">科学上网</span></h3><p>有一款为Chrome打造的访问谷歌的插件，叫做<a href="http://www.ggfwzs.com" target="_blank" rel="external">谷歌访问助手</a>，安装并激活了这个插件，便可以无痛享受谷歌的大部分服务诸如谷歌搜索，Gmail和应用商店等。新世界在向你招手。</p>
+<p>完。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Chrome浏览器&quot;&gt;&lt;a href=&quot;#Chrome浏览器&quot; class=&quot;headerlink&quot; title=&quot;Chrome浏览器&quot;&gt;&lt;/a&gt;Chrome浏览器&lt;/h3&gt;&lt;p&gt;用过Chrome的人都说好。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Misc" scheme="http://solidays.tk/categories/Misc/"/>
+    
+    
+      <category term="科学上网" scheme="http://solidays.tk/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+  </entry>
   
   <entry>
     <title>SSL supported</title>
@@ -96,7 +124,7 @@
     <link href="http://solidays.tk/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/"/>
     <id>http://solidays.tk/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/</id>
     <published>2018-01-16T14:37:31.000Z</published>
-    <updated>2018-01-16T14:40:00.717Z</updated>
+    <updated>2018-05-13T16:58:43.417Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>近来微信推出的小程序跳一跳着实在朋友圈火了一把，然而作为手残党的我只能望着好友排行榜上四五百的成绩黯然神伤。偶然发现了GitHub上的跳一跳开挂项目，试了一下效果甚好。</p>
 <a id="more"></a>
@@ -129,7 +157,7 @@
     
     </summary>
     
-      <category term="开挂" scheme="http://solidays.tk/categories/%E5%BC%80%E6%8C%82/"/>
+      <category term="Misc" scheme="http://solidays.tk/categories/Misc/"/>
     
     
       <category term="跳一跳" scheme="http://solidays.tk/tags/%E8%B7%B3%E4%B8%80%E8%B7%B3/"/>
@@ -177,7 +205,7 @@
     <link href="http://solidays.tk/2017/08/10/emoji-cheat-sheet/"/>
     <id>http://solidays.tk/2017/08/10/emoji-cheat-sheet/</id>
     <published>2017-08-10T04:16:20.000Z</published>
-    <updated>2018-01-19T03:54:03.987Z</updated>
+    <updated>2018-05-13T16:58:36.963Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt=":octocat:"></p>
 <h1><span id="some-emojis-supported-on-github">Some emojis supported on Github:</span></h1><a id="more"></a>
@@ -195,7 +223,7 @@
     
     </summary>
     
-      <category term="resources" scheme="http://solidays.tk/categories/resources/"/>
+      <category term="Misc" scheme="http://solidays.tk/categories/Misc/"/>
     
     
       <category term="emoji" scheme="http://solidays.tk/tags/emoji/"/>
@@ -207,7 +235,7 @@
     <link href="http://solidays.tk/2017/08/02/%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%A7%80%E4%B8%94%E5%85%8D%E8%B4%B9%E7%9A%84%E4%BA%91%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1%EF%BC%9F/"/>
     <id>http://solidays.tk/2017/08/02/有哪些优秀且免费的云存储服务？/</id>
     <published>2017-08-02T13:12:36.000Z</published>
-    <updated>2018-05-12T06:18:00.876Z</updated>
+    <updated>2018-05-13T16:58:55.876Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><blockquote>
 <p>转载自知乎<a href="https://www.zhihu.com/question/51309695" target="_blank" rel="external">有哪些优秀且免费的云存储服务？</a></p>
@@ -479,7 +507,7 @@
     
     </summary>
     
-      <category term="services" scheme="http://solidays.tk/categories/services/"/>
+      <category term="Misc" scheme="http://solidays.tk/categories/Misc/"/>
     
     
       <category term="云存储" scheme="http://solidays.tk/tags/%E4%BA%91%E5%AD%98%E5%82%A8/"/>
@@ -491,7 +519,7 @@
     <link href="http://solidays.tk/2017/07/25/hello-world/"/>
     <id>http://solidays.tk/2017/07/25/hello-world/</id>
     <published>2017-07-24T16:51:23.704Z</published>
-    <updated>2017-08-21T16:33:22.119Z</updated>
+    <updated>2018-05-13T16:59:14.346Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><!--
 <link rel="stylesheet" href="http://www.3gcs.com/css/style.css">
@@ -510,6 +538,8 @@
 &lt;h1 id=&quot;Welcome-to-Solidays-tk&quot;&gt;&lt;a href=&quot;#Welcome-to-Solidays-tk&quot; class=&quot;headerlink&quot; title=&quot;Welcome to Solidays.tk!&quot;&gt;&lt;/a&gt;Welcome to Solidays.tk!&lt;/h1&gt;
     
     </summary>
+    
+      <category term="Misc" scheme="http://solidays.tk/categories/Misc/"/>
     
     
       <category term="example" scheme="http://solidays.tk/tags/example/"/>

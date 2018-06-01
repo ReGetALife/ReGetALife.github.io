@@ -350,7 +350,7 @@ function commitResize(){
 }
 
 function stageTooSmallHandler(){
-    var warning = "Sorry, bigger screen required :(";
+    var warning = "抱歉，你需要更大的屏幕 :(";
     context.font = "bold normal 24px sans-serif";
     context.fillText(warning, bounds.getCenterX() - context.measureText(warning).width/2, bounds.getCenterY()-12);
 }
@@ -371,7 +371,7 @@ function stageTooSmallHandler(){
     var score;
     var fontProperties = new Sakri.CanvasTextProperties(Sakri.CanvasTextProperties.BOLD, null, 100);
 
-    var word = "SAKRI";
+    var word = "Solidays";
 
     function startDemo(){
         canvas.addEventListener('touchstart', handleUserTap, false);
@@ -472,7 +472,7 @@ function stageTooSmallHandler(){
         //game over logo
         context.drawImage(gameOverCanvas, bounds.getCenterX() - logoCanvas.width/2, canvas.height *.2);
 
-        var instruction = "Click or tap to flap again.";
+        var instruction = "点击或触摸再次起飞";
         context.font = "bold normal 24px sans-serif";
         context.fillStyle = "#FFFFFF";
         context.fillText(instruction, bounds.getCenterX() - context.measureText(instruction).width/2, canvas.height *.25 + gameOverCanvas.height);
@@ -490,7 +490,7 @@ function stageTooSmallHandler(){
     }
 
     function renderInstructions(){
-        var instruction = "Click or tap to flap :)";
+        var instruction = "点击或触摸即可起飞 :)";
         context.font = "bold normal 24px sans-serif";
         context.fillStyle = "#FFFFFF";
         context.fillText(instruction, bounds.getCenterX() - context.measureText(instruction).width/2, canvas.height *.2);
@@ -982,7 +982,7 @@ function createCityGraphic(){
         var textInput = document.getElementById("textInput");
         if(textInput.value && textInput.text!=""){
             if(textInput.value.length > maxCharacters){
-                alert("Sorry, there is only room for "+maxCharacters+" characters. Try a shorter name.");
+                alert("抱歉，名字最多只允许 "+maxCharacters+" 个字符. 试个短一点的名字吧.");
                 return;
             }
             if(textInput.value.indexOf(" ")>-1){

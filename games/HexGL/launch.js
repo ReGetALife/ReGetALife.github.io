@@ -46,7 +46,7 @@
 
   u = bkcore.Utils.getURLParameter;
 
-  s = [['controlType', ['KEYBOARD', 'TOUCH', 'LEAP MOTION CONTROLLER', 'GAMEPAD'], 0, 0, 'Controls: '], ['quality', ['LOW', 'MID', 'HIGH'], 2, 2, 'Quality: '], ['platform', ['DESKTOP', 'MOBILE'], 0, 0, 'Platform: '], ['godmode', ['OFF', 'ON'], 0, 1, 'Godmode: ']];
+  s = [['controlType', ['键盘', '触摸', '体感控制器', '游戏手柄'], 0, 0, '控制: '], ['quality', ['低', '中', '高'], 2, 2, '画质: '], ['platform', ['桌面', '手机'], 0, 0, '平台: '], ['godmode', ['OFF', 'ON'], 0, 1, '无敌模式: ']];
 
   _fn = function(a) {
     var e, f, _ref;

@@ -371,7 +371,7 @@ function stageTooSmallHandler(){
     var score;
     var fontProperties = new Sakri.CanvasTextProperties(Sakri.CanvasTextProperties.BOLD, null, 100);
 
-    var word = "Solidays";
+    var word = "233";
 
     function startDemo(){
         canvas.addEventListener('touchstart', handleUserTap, false);

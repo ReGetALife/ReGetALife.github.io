@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <script type="text/javascript" src="//gc.kis.v2.scr.kaspersky-labs.com/231A5A03-A1A6-B94A-94DC-F29EB782A5C4/main.js"
+    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/231A5A03-A1A6-B94A-94DC-F29EB782A5C4/main.js"
         charset="UTF-8"></script>
     <title>WUS City Database Online</title>
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="//api.map.baidu.com/getscript?v=2.0&ak=TPlgkDEFHisnIAVdXGOT7WGh"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&ak=TPlgkDEFHisnIAVdXGOT7WGh"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
     <script>
         function startSearch() {
@@ -38,7 +38,7 @@
         }
         function getEconomy(city){
             $.ajax({
-                url: "//139.199.75.41/api/economy",
+                url: "http://139.199.75.41/api/economy",
                 data: {
                     s:city,
                     m:"searchdata",
@@ -56,7 +56,7 @@
                     document.getElementById("economy").appendChild(childNode3);
                     }
                     var origin = document.createElement('a');
-                    origin.href = "//data.stats.gov.cn";
+                    origin.href = "http://data.stats.gov.cn";
                     origin.innerHTML = "信息来源：国家统计局";
                     origin.style = "float:right;width:400px;text-align:right;";
                     document.getElementById("economy").appendChild(origin);
@@ -126,7 +126,7 @@
         function getWeather(city) {
             $.ajax({
                 type: 'GET',
-                url: "//139.199.75.41/api/weather",
+                url: "http://139.199.75.41/api/weather",
                 data: {
                     theCityName: city
                 },
@@ -158,7 +158,7 @@
                     document.getElementById("weather").appendChild(childNode2);
 
                     var origin = document.createElement('a');
-                    origin.href = "//www.webxml.com.cn/zh_cn/index.aspx";
+                    origin.href = "http://www.webxml.com.cn/zh_cn/index.aspx";
                     origin.innerHTML = "信息来源：webxml.com.cn";
                     origin.style = "float:right;width:400px;text-align:right;";
                     document.getElementById("weather").appendChild(origin);
@@ -172,7 +172,7 @@
                     document.getElementById("brief").appendChild(briefInfo);
 
                     var origin2 = document.createElement('a');
-                    origin2.href = "//www.webxml.com.cn/zh_cn/index.aspx";
+                    origin2.href = "http://www.webxml.com.cn/zh_cn/index.aspx";
                     origin2.innerHTML = "信息来源：webxml.com.cn";
                     origin2.style = "float:right;width:400px;text-align:right;";
                     document.getElementById("brief").appendChild(origin2);
@@ -184,7 +184,7 @@
             var signature = md5("fa6c47a72dcf4ae6834b6dc2416db454" + timestamp + "bPrA4mec9wMnIDy8")
             $.ajax({
                 type: 'GET',
-                url: "//139.199.75.41/api/news",
+                url: "http://139.199.75.41/api/news",
                 data: {
                     q: city,
                     size: 15,

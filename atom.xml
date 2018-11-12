@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2018-06-13T06:44:02.129Z</updated>
+  <updated>2018-05-13T17:02:08.306Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -14,42 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>How to pack your Qt application into a single exe file</title>
-    <link href="http://solidays.tk/2018/06/13/How-to-pack-your-Qt-application-into-a-single-exe-file/"/>
-    <id>http://solidays.tk/2018/06/13/How-to-pack-your-Qt-application-into-a-single-exe-file/</id>
-    <published>2018-06-13T06:44:02.000Z</published>
-    <updated>2018-06-13T06:44:02.129Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>DIY your icon in QT</title>
-    <link href="http://solidays.tk/2018/06/13/DIY-your-icon-in-QT/"/>
-    <id>http://solidays.tk/2018/06/13/DIY-your-icon-in-QT/</id>
-    <published>2018-06-13T02:55:38.000Z</published>
-    <updated>2018-06-13T02:55:38.803Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Use your Chrome to visit Google</title>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2018-05-13T17:02:08.307Z</updated>
+  <updated>2019-04-02T12:32:58.045Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Permission denied (publickey)</title>
+    <link href="http://solidays.tk/2019/04/02/Permission-denied-publickey/"/>
+    <id>http://solidays.tk/2019/04/02/Permission-denied-publickey/</id>
+    <published>2019-04-02T11:45:12.000Z</published>
+    <updated>2019-04-02T12:32:58.045Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="解决git部署时报错permission-denied-publickey">解决Git部署时报错：Permission denied (publickey)</span></h3><p>平台：Win10</p>
+<a id="more"></a>
+<p>很久没有更新文章了，断更期间还重装了系统:D</p>
+<p>于是乎今天用HEXO部署文章时报错了：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Permission denied (publickey)</div></pre></td></tr></table></figure>
+<p>错误原因就是字面意思，SSH Key没有配置好。</p>
+<p>首先在Git Bash中检查是否有SSH Key：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> ssh -T git@github.com</div><div class="line">git@github.com: Permission denied (publickey).</div></pre></td></tr></table></figure>
+<p>嗯，没有。</p>
+<p>那就新建一个吧：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> ssh-keygen -t rsa -C "example@qq.com"</div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/c/Users/xiaoming/.ssh/id_rsa):</div><div class="line">Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div><div class="line">Your identification has been saved in /c/Users/xiaoming/.ssh/id_rsa.</div><div class="line">Your public key has been saved in /c/Users/xiaoming/.ssh/id_rsa.pub.</div><div class="line">The key fingerprint is:</div><div class="line">SHA256:pdmmm0dTm/sssss5xoPmY82FCHznLngEbC5iEtpKkba example@qq.com</div><div class="line">The key's randomart image is:</div><div class="line">+---[RSA 2048]----+</div><div class="line">|o.. . o.o        |</div><div class="line">|o+.. . + .       |</div><div class="line">|ooo       o +    |</div><div class="line">|Eo       B = *   |</div><div class="line">|.       S = = o  |</div><div class="line">|       o # * o   |</div><div class="line">|        O / *    |</div><div class="line">|       . * = .   |</div><div class="line">|                 |</div><div class="line">+----[SHA256]-----+</div></pre></td></tr></table></figure>
+<p>执行过程中要求输入口令，直接回车就好，无伤大雅。然后登录GitHub在账户的设置中找到<code>SSH and GPG keys</code>，点击<code>New SSH Key</code>新建SSH Key，将<code>c/Users/xiaoming/.ssh/id_rsa.pub</code>文件内的公钥粘贴进去即可。</p>
+<p>再次检查：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> ssh -T git@github.com</div><div class="line">Warning: Permanently added the RSA host key for IP address '13.250.177.223' to the list of known hosts.</div><div class="line">Hi Xiaoming! You've successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+<p>OK，再次部署就成功了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;解决Git部署时报错：Permission-denied-publickey&quot;&gt;&lt;a href=&quot;#解决Git部署时报错：Permission-denied-publickey&quot; class=&quot;headerlink&quot; title=&quot;解决Git部署时报错：Permission denied (publickey)&quot;&gt;&lt;/a&gt;解决Git部署时报错：Permission denied (publickey)&lt;/h3&gt;&lt;p&gt;平台：Win10&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Misc" scheme="http://solidays.tk/categories/Misc/"/>
+    
+    
+      <category term="Git" scheme="http://solidays.tk/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Use your Chrome to visit Google</title>

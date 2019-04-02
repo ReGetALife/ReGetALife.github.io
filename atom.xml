@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2018-05-13T17:02:08.306Z</updated>
+  <updated>2018-05-13T17:02:08.307Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://solidays.tk/2018/05/14/Use-your-Chrome-to-visit-Google/"/>
     <id>http://solidays.tk/2018/05/14/Use-your-Chrome-to-visit-Google/</id>
     <published>2018-05-13T16:28:26.000Z</published>
-    <updated>2018-05-13T17:02:08.306Z</updated>
+    <updated>2018-05-13T17:02:08.307Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="chrome浏览器">Chrome浏览器</span></h3><p>用过Chrome的人都说好。</p>
 <a id="more"></a>
@@ -48,7 +48,7 @@
     <link href="http://solidays.tk/2018/05/12/SSL-supported/"/>
     <id>http://solidays.tk/2018/05/12/SSL-supported/</id>
     <published>2018-05-12T07:10:46.000Z</published>
-    <updated>2018-05-12T07:24:15.023Z</updated>
+    <updated>2018-05-12T07:24:15.024Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="note">NOTE:</span></h3><p>即日起本站全面支持SSL协议。<a href="https://www.cloudflare.com" target="_blank" rel="external">CloudFlare</a>提供支持。</p>
 <a id="more"></a>
@@ -73,7 +73,7 @@
     <link href="http://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/"/>
     <id>http://solidays.tk/2018/05/11/Introduction-to-Qt-Creater/</id>
     <published>2018-05-11T15:41:17.000Z</published>
-    <updated>2018-05-12T06:59:56.123Z</updated>
+    <updated>2018-05-12T06:59:56.124Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="背景">背景</span></h3><p>​        最近操作系统项目要求做一个电梯调度程序，周围同学有的使用Java+Swing，有的使用Js，而我打算使用C++。第一次做有GUI的软件，上网搜索一番后发现了Qt这个工具，评价颇高。</p>
 <a id="more"></a>
@@ -169,7 +169,7 @@
     <link href="http://solidays.tk/2017/08/18/Add-Donation-to-your-Site/"/>
     <id>http://solidays.tk/2017/08/18/Add-Donation-to-your-Site/</id>
     <published>2017-08-18T04:50:13.000Z</published>
-    <updated>2017-08-26T08:38:34.335Z</updated>
+    <updated>2017-08-26T08:38:34.336Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="如何给自己的网站添加打赏">如何给自己的网站添加打赏😆</span></h3><a id="more"></a>
 <p>许多的原创内容的网站尤其是博客都有打赏的功能，下面介绍如何添加简单的打赏按钮<br>借助hexo建站的网站，并且使用的是NexT主题，主题本身已经自带了打赏功能，参照主题文档开启即可，不再赘述。</p>
@@ -205,10 +205,9 @@
     <link href="http://solidays.tk/2017/08/10/emoji-cheat-sheet/"/>
     <id>http://solidays.tk/2017/08/10/emoji-cheat-sheet/</id>
     <published>2017-08-10T04:16:20.000Z</published>
-    <updated>2018-05-13T16:58:36.963Z</updated>
+    <updated>2019-04-02T11:13:47.057Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt=":octocat:"></p>
-<h1><span id="some-emojis-supported-on-github">Some emojis supported on Github:</span></h1><a id="more"></a>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1><span id="some-emojis-supported-on-github">Some emojis supported on Github:</span></h1><a id="more"></a>
 <h2><span id="people">People</span></h2><p>😄😆😊😃☺️😏😍😘😚😳😌😆😁😉😜😝😀😗😙<br>😛😴😟😦😧😮😬😕😯😑😒😅😓😥😩😔😞😖😨<br>😰😣😢😭😂😲😱😫😠😡😤😪😋😷😎😵👿😈😐<br>😶😇👽💛💙💜  ❤️  💚💔💓💗💕💞💘💖✨⭐️🌟💫<br>💥💥💢❗️❓❕❔💤💨💦🎶🎵🔥💩💩💩👍👍👎<br>👎👌👊👊✊✌️👋✋✋👐☝️👇👈👉🙌🙏👆👏💪<br>🤘🖕🏃🏃👫👪👬👭💃👯🙆🙅💁🙋👰🙎🙍🙇💑<br>💆💇💅👦👧👩👨👶👵👴👱👲👳👷👮👼👸😺😸<br>😻😽😼🙀😿😹😾👹👺🙈🙉🙊💂💀🐾👄💋💧👂<br>👀👃👅💌👤👥💬💭</p>
 <h2><span id="nature">Nature</span></h2><p>☀️☔️☁️❄️⛄️⚡️🌀🌁🌊🐱🐶🐭🐹🐰🐺🐸🐯🐨🐻<br>🐷🐽🐮🐗🐵🐒🐴🐎🐫🐑🐘🐼🐍🐦🐤🐥🐣🐔🐧<br>🐢🐛🐝🐜🐞🐌🐙🐠🐟🐳🐋🐬🐄🐏🐀🐃🐅🐇🐉<br>🐐🐓🐕🐖🐁🐂🐲🐡🐊🐪🐆🐈🐩🐾💐🌸🌷🍀🌹<br>🌻🌺🍁🍃🍂🌿🍄🌵🌴🌲🌳🌰🌱🌼🌾🐚🌐🌞🌝<br>🌚🌑🌒🌓🌔🌕🌖🌗🌘🌜🌛🌙🌍🌎🌏🌋🌌⛅️</p>
 <h2><span id="objects">Objects</span></h2><p>🎍💝🎎🎒🎓🎏🎆🎇🎐🎑🎃👻🎅🎄🎁🔔🔕🎋🎉<br>🎊🎈🔮💿📀💾📷📹🎥💻📺📱☎️☎️📞📟📠💽📼<br>🔉🔈🔇📢📣⌛️⏳⏰⌚️📻📡➿🔍🔎🔓🔒🔏🔐🔑<br>💡🔦🔆🔅🔌🔋📲✉️📫📮🛀🛁🚿🚽🔧🔩🔨💺💰<br>💴💵💷💶💳💸📧📥📤✉️📨📯📪📬📭📦🚪🚬💣<br>🔫🔪💊💉📄📃📑📊📈📉📜📋📆📅📇📁📂✂️📌<br>📎✒️✏️📏📐📕📗📘📙📓📔📒📚🔖📛🔬🔭📰🏈<br>🏀⚽️⚾️🎾🎱🏉🎳⛳️🚵🚴🏇🏂🏊🏄🎿♠️♥️♣️♦️<br>💎💍🏆🎼🎹🎻👾🎮🃏🎴🎲🎯🀄️🎬📝📝📖🎨🎤<br>🎧🎺🎷🎸👞👡👠💄👢👕👕👔👚👗🎽👖👘👙🎀<br>🎩👑👒👞🌂💼👜👝👛👓🎣☕️🍵🍶🍼🍺🍻🍸🍹<br>🍷🍴🍕🍔🍟🍗🍖🍝🍛🍤🍱🍣🍥🍙🍘🍚🍜🍲🍢<br>🍡🥚🍞🍩🍮🍦🍨🍧🎂🍰🍪🍫🍬🍭🍯🍎🍏🍊🍋<br>🍒🍇🍉🍓🍑🍈🍌🍐🍍🍠🍆🍅🌽</p>
@@ -218,8 +217,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://assets-cdn.github.com/images/icons/emoji/octocat.png&quot; alt=&quot;:octocat:&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Some-emojis-supported-on-Github&quot;&gt;&lt;a href=&quot;#Some-emojis-supported-on-Github&quot; class=&quot;headerlink&quot; title=&quot;Some emojis supported on Github:&quot;&gt;&lt;/a&gt;Some emojis supported on Github:&lt;/h1&gt;
+      &lt;h1 id=&quot;Some-emojis-supported-on-Github&quot;&gt;&lt;a href=&quot;#Some-emojis-supported-on-Github&quot; class=&quot;headerlink&quot; title=&quot;Some emojis supported on Github:&quot;&gt;&lt;/a&gt;Some emojis supported on Github:&lt;/h1&gt;
     
     </summary>
     
@@ -518,8 +516,8 @@
     <title>Hello World</title>
     <link href="http://solidays.tk/2017/07/25/hello-world/"/>
     <id>http://solidays.tk/2017/07/25/hello-world/</id>
-    <published>2017-07-24T16:51:23.704Z</published>
-    <updated>2018-05-13T16:59:14.346Z</updated>
+    <published>2017-07-25T07:10:46.000Z</published>
+    <updated>2019-04-02T11:01:58.808Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><!--
 <link rel="stylesheet" href="http://www.3gcs.com/css/style.css">

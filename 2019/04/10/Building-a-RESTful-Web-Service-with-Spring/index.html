@@ -3,18 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>时间轴: 2019/4 | Solidays</title>
+    <title>Building a RESTful Web Service with Spring | Solidays</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Blog by GetALife">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Solidays">
-<meta property="og:url" content="http://solidays.tk/archives/2019/04/index.html">
+    <meta name="description" content="使用Spring构建RESTful的Web服务目标构建一个可以接受http请求的API。">
+<meta name="keywords" content="Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building a RESTful Web Service with Spring">
+<meta property="og:url" content="http://solidays.tk/2019/04/10/Building-a-RESTful-Web-Service-with-Spring/index.html">
 <meta property="og:site_name" content="Solidays">
-<meta property="og:description" content="Blog by GetALife">
+<meta property="og:description" content="使用Spring构建RESTful的Web服务目标构建一个可以接受http请求的API。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-10T12:32:39.433Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Solidays">
-<meta name="twitter:description" content="Blog by GetALife">
+<meta name="twitter:title" content="Building a RESTful Web Service with Spring">
+<meta name="twitter:description" content="使用Spring构建RESTful的Web服务目标构建一个可以接受http请求的API。">
     
 
     
@@ -334,25 +336,21 @@ var ap = new APlayer({
 var ap = new APlayer(option);
 </script>
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2019</h1>
-            </div>
+            <section id="main"><article id="post-Building-a-RESTful-Web-Service-with-Spring" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2019/04/10/Building-a-RESTful-Web-Service-with-Spring/">Building a RESTful Web Service with Spring</a>
+        <h1 class="article-title" itemprop="name">
+            Building a RESTful Web Service with Spring
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2019/04/10/Building-a-RESTful-Web-Service-with-Spring/">
@@ -361,95 +359,263 @@ var ap = new APlayer(option);
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/软件开发/">软件开发</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/Spring/">Spring</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+
+                        
+                           <span id="busuanzi_container_page_pv">
+                               <i class="fa fa-eye"></i>
+                           <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                        
+
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2019/04/08/win10-system-high-CPU-usage/">win10 system high CPU usage</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <script src="/assets/js/APlayer.min.js"> </script><h3><span id="使用spring构建restful的web服务">使用Spring构建RESTful的Web服务</span></h3><h4><span id="目标">目标</span></h4><p>构建一个可以接受http请求的API。</p>
+<a id="more"></a>
+<p>这个API看起来是这样的，访问<code>http://localhost:8080/greeting</code>，返回</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"id"</span>:<span class="number">1</span>,<span class="attr">"content"</span>:<span class="string">"Hello, World!"</span>&#125;</div></pre></td></tr></table></figure>
+<p>或者带上参数<code>http://localhost:8080/greeting?name=User</code>，返回</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"id"</span>:<span class="number">1</span>,<span class="attr">"content"</span>:<span class="string">"Hello, User!"</span>&#125;</div></pre></td></tr></table></figure>
+<h4><span id="准备">准备</span></h4><ul>
+<li>Java8或更高。</li>
+<li>maven3.2或更高</li>
+<li>Spring boot 2.1.3</li>
+<li>编辑器或者IDE</li>
+</ul>
+<h4><span id="操作">操作</span></h4><p><a href="https://github.com/spring-guides/gs-rest-service/archive/master.zip" target="_blank" rel="external">下载</a>样例源码，或者使用git clone到本地：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/spring-guides/gs-rest-service.git</div></pre></td></tr></table></figure>
+<p>然后进入到<code>initial</code>文件夹下，之后的所有操作以该文件夹为工作目录。</p>
+<p><strong>创建资源类</strong></p>
+<p>新建<code>src/main/java/hello/Greeting.java</code>文件：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> hello;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">long</span> id;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String content;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Greeting</span><span class="params">(<span class="keyword">long</span> id, String content)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.id = id;</div><div class="line">        <span class="keyword">this</span>.content = content;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getContent</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> content;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>创建控制类</strong></p>
+<p>新建<code>src/main/java/hello/GreetingController.java</code>文件：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> hello;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.concurrent.atomic.AtomicLong;</div><div class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</div><div class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</div><div class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</div><div class="line"></div><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GreetingController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String template = <span class="string">"Hello, %s!"</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AtomicLong counter = <span class="keyword">new</span> AtomicLong();</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/greeting"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Greeting <span class="title">greeting</span><span class="params">(@RequestParam(value=<span class="string">"name"</span>, defaultValue=<span class="string">"World"</span>)</span> String name) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Greeting(counter.incrementAndGet(),</div><div class="line">                            String.format(template, name));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>控制类用于处理HTTP请求。</p>
+<ul>
+<li><code>@RestController</code>注释表明这是一个控制类。</li>
+<li><code>@RequestMapping(&quot;/greeting&quot;)</code>注释可以将请求到<code>/greeting</code>地址的HTTP请求映射到<code>greeting()</code>方法。<blockquote>
+<p><code>@RequestMapping</code>默认会映射所有HTTP方式，可以通过<code>@RequestMapping(method=GET)</code>指定具体的方式。</p>
+</blockquote>
+</li>
+<li><code>@RequestParam</code>注释用于将请求中的<code>name</code>字段与<code>greeting()</code>方法中的<code>name</code>参数绑定。</li>
+</ul>
+<p><strong>添加main方法</strong></p>
+<p>新建<code>src/main/java/hello/Application.java</code>文件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> hello;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</div><div class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</div><div class="line"></div><div class="line"><span class="meta">@SpringBootApplication</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        SpringApplication.run(Application.class, args);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>@SpringBootApplication</code>注释相当于下列多个注释：</p>
+<ul>
+<li><code>@Configuration</code></li>
+<li><code>@EnableAutoConfiguration</code></li>
+<li><code>@EnableWebMvc</code></li>
+<li><code>@ComponentScan</code></li>
+</ul>
+<p><strong>运行</strong></p>
+<p>在工作目录下打开控制台窗口，运行：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn spring-boot:run</div></pre></td></tr></table></figure></p>
+<p>之后访问<code>http://localhost:8080/greeting</code>即可看到API返回的数据，也可以在查询中带上参数<code>name</code>。</p>
+<p>若要停止应用，按<code>Ctrl</code>+<code>C</code>（在git bash中失效）。</p>
+<p><strong>打包</strong></p>
+<p>在工作目录下打开控制台窗口，运行：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn package</div></pre></td></tr></table></figure></p>
+<p>可以将应用打包为jar包，保存在<code>target</code>目录下。</p>
+<p>以下命令可以查看jar包中都有什么：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jar tvf target/gs-rest-service-<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>.jar</div></pre></td></tr></table></figure></p>
+<p>以下命令可以运行jar包：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar target/gs-rest-service-<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>.jar</div></pre></td></tr></table></figure></p>
+<p>同样，若要停止应用，按<code>Ctrl</code>+<code>C</code>。</p>
+<h4><span id="使用intellij-idea">使用IntelliJ IDEA</span></h4><p>如果使用IntelliJ IDEA，它已经自带了maven和spring，可以直接在IDE界面中点击按钮运行或调试，并且可以通过图形界面将应用打包。</p>
+<h4><span id="参考">参考</span></h4><p><a href="https://spring.io/guides/gs/rest-service/" target="_blank" rel="external">Getting Started · Building a RESTful Web Service</a></p>
+<p><a href="https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/reference/html" target="_blank" rel="external">Spring Boot Reference Guide</a></p>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/04/08/win10-system-high-CPU-usage/">
-            <time datetime="2019-04-08T08:10:32.000Z" itemprop="datePublished">2019-04-08</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Misc/">Misc</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/win10/">win10</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2019/04/02/Permission-denied-publickey/">Permission denied (publickey)</a>
-        </h1>
-    
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2019/04/02/Permission-denied-publickey/">
-            <time datetime="2019-04-02T11:45:12.000Z" itemprop="datePublished">2019-04-02</time>
-        </a>
-    </div>
+        
+            <footer class="article-footer">
+                <div class="share-container">
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/Misc/">Misc</a>
-    </div>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Git/">Git</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">分享到</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_sina_weibo"></a>
+    <a class="a2a_button_wechat"></a>
+    <a class="a2a_button_douban"></a>
+    <a class="a2a_button_qzone"></a>
+    <a class="a2a_button_renren"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_button_email"></a>
 </div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+</div>
+
+            </footer>
+        
+    </div>
+
+
+
+
+
+
+    
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+     
+            <div>您的支持将鼓励我继续创作！</div>
+ <br>   
+            <button id="rewardButton" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" disable="enable">
+
+               <img src="/css/images/赏.png">
+            </button>
+            <div id="QR" style="display: none;">
+                <div style="display: inline-block">
+                    <img src="/css/images/zhifubao.jpg">
+                    <p>支付宝打赏</p>
+                </div>
+                <div style="display: inline-block">
+                    <img src="/css/images/weixin.jpg">
+                    <p>微信打赏</p>
+                </div>
+
+                <div style="display: inline-block">
+                    <img src="/css/images/qq.jpg">
+                    <p>QQ打赏</p>
+                </div>
+            </div>
+        </div>
+    
+      
+        
+                 
+
+
+
+
+
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/04/08/win10-system-high-CPU-usage/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">win10 system high CPU usage</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+	<div id="gitalk-container"></div>
+</section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+#rewardButton {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0;
+}
+#QR {
+	padding-top: 20px;
+}
+
+#QR img {
+	width: 120px;
+        max-width: 100%;
+
+        margin: .8em 2em 0;
+}
+#rewardButton img {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	background: #b9dff3;
+}
+#rewardButton img:hover {
+	background: #f39a75;
+}
+</style>
+
 </section>
             
                 

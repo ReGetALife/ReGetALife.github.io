@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2019-04-08T08:30:11.242Z</updated>
+  <updated>2019-04-10T12:32:39.433Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -14,6 +14,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Building a RESTful Web Service with Spring</title>
+    <link href="http://solidays.tk/2019/04/10/Building-a-RESTful-Web-Service-with-Spring/"/>
+    <id>http://solidays.tk/2019/04/10/Building-a-RESTful-Web-Service-with-Spring/</id>
+    <published>2019-04-10T09:33:06.000Z</published>
+    <updated>2019-04-10T12:32:39.433Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="使用spring构建restful的web服务">使用Spring构建RESTful的Web服务</span></h3><h4><span id="目标">目标</span></h4><p>构建一个可以接受http请求的API。</p>
+<a id="more"></a>
+<p>这个API看起来是这样的，访问<code>http://localhost:8080/greeting</code>，返回</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"id"</span>:<span class="number">1</span>,<span class="attr">"content"</span>:<span class="string">"Hello, World!"</span>&#125;</div></pre></td></tr></table></figure>
+<p>或者带上参数<code>http://localhost:8080/greeting?name=User</code>，返回</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attr">"id"</span>:<span class="number">1</span>,<span class="attr">"content"</span>:<span class="string">"Hello, User!"</span>&#125;</div></pre></td></tr></table></figure>
+<h4><span id="准备">准备</span></h4><ul>
+<li>Java8或更高。</li>
+<li>maven3.2或更高</li>
+<li>Spring boot 2.1.3</li>
+<li>编辑器或者IDE</li>
+</ul>
+<h4><span id="操作">操作</span></h4><p><a href="https://github.com/spring-guides/gs-rest-service/archive/master.zip" target="_blank" rel="external">下载</a>样例源码，或者使用git clone到本地：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/spring-guides/gs-rest-service.git</div></pre></td></tr></table></figure>
+<p>然后进入到<code>initial</code>文件夹下，之后的所有操作以该文件夹为工作目录。</p>
+<p><strong>创建资源类</strong></p>
+<p>新建<code>src/main/java/hello/Greeting.java</code>文件：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> hello;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">long</span> id;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String content;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Greeting</span><span class="params">(<span class="keyword">long</span> id, String content)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.id = id;</div><div class="line">        <span class="keyword">this</span>.content = content;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getContent</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> content;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>创建控制类</strong></p>
+<p>新建<code>src/main/java/hello/GreetingController.java</code>文件：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> hello;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.concurrent.atomic.AtomicLong;</div><div class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</div><div class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</div><div class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</div><div class="line"></div><div class="line"><span class="meta">@RestController</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GreetingController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String template = <span class="string">"Hello, %s!"</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AtomicLong counter = <span class="keyword">new</span> AtomicLong();</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/greeting"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> Greeting <span class="title">greeting</span><span class="params">(@RequestParam(value=<span class="string">"name"</span>, defaultValue=<span class="string">"World"</span>)</span> String name) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Greeting(counter.incrementAndGet(),</div><div class="line">                            String.format(template, name));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>控制类用于处理HTTP请求。</p>
+<ul>
+<li><code>@RestController</code>注释表明这是一个控制类。</li>
+<li><code>@RequestMapping(&quot;/greeting&quot;)</code>注释可以将请求到<code>/greeting</code>地址的HTTP请求映射到<code>greeting()</code>方法。<blockquote>
+<p><code>@RequestMapping</code>默认会映射所有HTTP方式，可以通过<code>@RequestMapping(method=GET)</code>指定具体的方式。</p>
+</blockquote>
+</li>
+<li><code>@RequestParam</code>注释用于将请求中的<code>name</code>字段与<code>greeting()</code>方法中的<code>name</code>参数绑定。</li>
+</ul>
+<p><strong>添加main方法</strong></p>
+<p>新建<code>src/main/java/hello/Application.java</code>文件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> hello;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</div><div class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</div><div class="line"></div><div class="line"><span class="meta">@SpringBootApplication</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        SpringApplication.run(Application.class, args);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>@SpringBootApplication</code>注释相当于下列多个注释：</p>
+<ul>
+<li><code>@Configuration</code></li>
+<li><code>@EnableAutoConfiguration</code></li>
+<li><code>@EnableWebMvc</code></li>
+<li><code>@ComponentScan</code></li>
+</ul>
+<p><strong>运行</strong></p>
+<p>在工作目录下打开控制台窗口，运行：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn spring-boot:run</div></pre></td></tr></table></figure></p>
+<p>之后访问<code>http://localhost:8080/greeting</code>即可看到API返回的数据，也可以在查询中带上参数<code>name</code>。</p>
+<p>若要停止应用，按<code>Ctrl</code>+<code>C</code>（在git bash中失效）。</p>
+<p><strong>打包</strong></p>
+<p>在工作目录下打开控制台窗口，运行：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn package</div></pre></td></tr></table></figure></p>
+<p>可以将应用打包为jar包，保存在<code>target</code>目录下。</p>
+<p>以下命令可以查看jar包中都有什么：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jar tvf target/gs-rest-service-<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>.jar</div></pre></td></tr></table></figure></p>
+<p>以下命令可以运行jar包：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar target/gs-rest-service-<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>.jar</div></pre></td></tr></table></figure></p>
+<p>同样，若要停止应用，按<code>Ctrl</code>+<code>C</code>。</p>
+<h4><span id="使用intellij-idea">使用IntelliJ IDEA</span></h4><p>如果使用IntelliJ IDEA，它已经自带了maven和spring，可以直接在IDE界面中点击按钮运行或调试，并且可以通过图形界面将应用打包。</p>
+<h4><span id="参考">参考</span></h4><p><a href="https://spring.io/guides/gs/rest-service/" target="_blank" rel="external">Getting Started · Building a RESTful Web Service</a></p>
+<p><a href="https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/reference/html" target="_blank" rel="external">Spring Boot Reference Guide</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;使用Spring构建RESTful的Web服务&quot;&gt;&lt;a href=&quot;#使用Spring构建RESTful的Web服务&quot; class=&quot;headerlink&quot; title=&quot;使用Spring构建RESTful的Web服务&quot;&gt;&lt;/a&gt;使用Spring构建RESTful的Web服务&lt;/h3&gt;&lt;h4 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot; title=&quot;目标&quot;&gt;&lt;/a&gt;目标&lt;/h4&gt;&lt;p&gt;构建一个可以接受http请求的API。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="软件开发" scheme="http://solidays.tk/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Spring" scheme="http://solidays.tk/tags/Spring/"/>
+    
+  </entry>
   
   <entry>
     <title>win10 system high CPU usage</title>
@@ -61,13 +134,13 @@
 <figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Permission denied (publickey)</div></pre></td></tr></table></figure>
 <p>错误原因就是字面意思，SSH Key没有配置好。</p>
 <p>首先在Git Bash中检查是否有SSH Key：</p>
-<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> ssh -T git@github.com</div><div class="line">git@github.com: Permission denied (publickey).</div></pre></td></tr></table></figure>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> ssh -T git@github.com</span></div><div class="line">git@github.com: Permission denied (publickey).</div></pre></td></tr></table></figure>
 <p>嗯，没有。</p>
 <p>那就新建一个吧：</p>
-<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> ssh-keygen -t rsa -C "example@qq.com"</div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/c/Users/xiaoming/.ssh/id_rsa):</div><div class="line">Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div><div class="line">Your identification has been saved in /c/Users/xiaoming/.ssh/id_rsa.</div><div class="line">Your public key has been saved in /c/Users/xiaoming/.ssh/id_rsa.pub.</div><div class="line">The key fingerprint is:</div><div class="line">SHA256:pdmmm0dTm/sssss5xoPmY82FCHznLngEbC5iEtpKkba example@qq.com</div><div class="line">The key's randomart image is:</div><div class="line">+---[RSA 2048]----+</div><div class="line">|o.. . o.o        |</div><div class="line">|o+.. . + .       |</div><div class="line">|ooo       o +    |</div><div class="line">|Eo       B = *   |</div><div class="line">|.       S = = o  |</div><div class="line">|       o # * o   |</div><div class="line">|        O / *    |</div><div class="line">|       . * = .   |</div><div class="line">|                 |</div><div class="line">+----[SHA256]-----+</div></pre></td></tr></table></figure>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa -C <span class="string">"example@qq.com"</span></span></div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file in which to save the key (/c/Users/xiaoming/.ssh/id_rsa):</div><div class="line">Enter passphrase (empty for no passphrase):</div><div class="line">Enter same passphrase again:</div><div class="line">Your identification has been saved in /c/Users/xiaoming/.ssh/id_rsa.</div><div class="line">Your public key has been saved in /c/Users/xiaoming/.ssh/id_rsa.pub.</div><div class="line">The key fingerprint is:</div><div class="line">SHA256:pdmmm0dTm/sssss5xoPmY82FCHznLngEbC5iEtpKkba example@qq.com</div><div class="line">The key's randomart image is:</div><div class="line">+---[RSA 2048]----+</div><div class="line">|o.. . o.o        |</div><div class="line">|o+.. . + .       |</div><div class="line">|ooo       o +    |</div><div class="line">|Eo       B = *   |</div><div class="line">|.       S = = o  |</div><div class="line">|       o # * o   |</div><div class="line">|        O / *    |</div><div class="line">|       . * = .   |</div><div class="line">|                 |</div><div class="line">+----[SHA256]-----+</div></pre></td></tr></table></figure>
 <p>执行过程中要求输入口令，直接回车就好，无伤大雅。然后登录GitHub在账户的设置中找到<code>SSH and GPG keys</code>，点击<code>New SSH Key</code>新建SSH Key，将<code>c/Users/xiaoming/.ssh/id_rsa.pub</code>文件内的公钥粘贴进去即可。</p>
 <p>再次检查：</p>
-<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> ssh -T git@github.com</div><div class="line">Warning: Permanently added the RSA host key for IP address '13.250.177.223' to the list of known hosts.</div><div class="line">Hi Xiaoming! You've successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> ssh -T git@github.com</span></div><div class="line">Warning: Permanently added the RSA host key for IP address '13.250.177.223' to the list of known hosts.</div><div class="line">Hi Xiaoming! You've successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
 <p>OK，再次部署就成功了。</p>
 ]]></content>
     

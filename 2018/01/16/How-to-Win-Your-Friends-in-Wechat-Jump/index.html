@@ -395,20 +395,20 @@ var ap = new APlayer({
 <blockquote>
 <p>2017 年 12 月 28 日下午，微信发布了 6.6.1 版本，加入了「小游戏」功能，并提供了官方 DEMO「跳一跳」。这是一个 2.5D 插画风格的益智游戏，玩家可以通过按压屏幕时间的长短来控制这个「小人」跳跃的距离。<strong>如果能利用图像识别精确测量出起始和目标点之间测距离，就可以估计按压的时间来精确跳跃。</strong></p>
 </blockquote>
-<p>GitHub上的跳一跳辅助项目在<a href="https://github.com/wangshub/wechat_jump_game" target="_blank" rel="external">这里</a>。（温馨提示：腾讯的程序员显然也在持续关注这个项目，因此被官方识别出开挂而失去分数的可能性还是存在的。）</p>
-<p>下面介绍如何在利用该项目称霸好友榜。我是在win10上操纵安卓设备，其他设备的请自行<a href="https://github.com/wangshub/wechat_jump_game/wiki" target="_blank" rel="external">查阅文档</a>。</p>
+<p>GitHub上的跳一跳辅助项目在<a href="https://github.com/wangshub/wechat_jump_game" target="_blank" rel="noopener">这里</a>。（温馨提示：腾讯的程序员显然也在持续关注这个项目，因此被官方识别出开挂而失去分数的可能性还是存在的。）</p>
+<p>下面介绍如何在利用该项目称霸好友榜。我是在win10上操纵安卓设备，其他设备的请自行<a href="https://github.com/wangshub/wechat_jump_game/wiki" target="_blank" rel="noopener">查阅文档</a>。</p>
 <h4><span id="搭建python环境">搭建python环境</span></h4><p>自行百度安装即可。我安装的是python2.7.13。安装完成后还需要添加<strong>环境变量</strong> ：在文件资源管理器-&gt;此电脑（右键）-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;系统变量，找到<code>path</code>变量，添加python的安装路径，例如<code>C:\Python27</code> 。之后打开<code>cmd</code>输入python显示出版本号说明已经成功配置。</p>
-<h4><span id="搭建adb环境">搭建ADB环境</span></h4><p>直接在<a href="https://adb.clockworkmod.com/" target="_blank" rel="external">这里</a>下载安装即可。安装完成后同样要添加<strong>环境变量</strong>，方法同上（安装路径类似<code>C:\Program Files (x86)\ClockworkMod\Universal Adb Driver</code>）。之后打开<code>cmd</code>输入adb显示出大量文字说明已经成功配置。</p>
-<h4><span id="下载app">下载APP</span></h4><p>为了尽量简单，我们选择使用app进行一键操作。在<a href="https://github.com/wangshub/wechat_jump_game/releases" target="_blank" rel="external">这里</a>下载最新的对应的release版本。比如我下载了<code>STOP_jump_win.rar</code> 。然后解压。在解压的目录里新建<code>requirements.txt</code>文件，内容与<a href="https://github.com/wangshub/wechat_jump_game/blob/master/requirements.txt" target="_blank" rel="external">此处</a>一致。</p>
+<h4><span id="搭建adb环境">搭建ADB环境</span></h4><p>直接在<a href="https://adb.clockworkmod.com/" target="_blank" rel="noopener">这里</a>下载安装即可。安装完成后同样要添加<strong>环境变量</strong>，方法同上（安装路径类似<code>C:\Program Files (x86)\ClockworkMod\Universal Adb Driver</code>）。之后打开<code>cmd</code>输入adb显示出大量文字说明已经成功配置。</p>
+<h4><span id="下载app">下载APP</span></h4><p>为了尽量简单，我们选择使用app进行一键操作。在<a href="https://github.com/wangshub/wechat_jump_game/releases" target="_blank" rel="noopener">这里</a>下载最新的对应的release版本。比如我下载了<code>STOP_jump_win.rar</code> 。然后解压。在解压的目录里新建<code>requirements.txt</code>文件，内容与<a href="https://github.com/wangshub/wechat_jump_game/blob/master/requirements.txt" target="_blank" rel="noopener">此处</a>一致。</p>
 <h4><span id="安装依赖文件">安装依赖文件</span></h4><p>在解压目录里面按住shift+鼠标右键打开命令行窗口或者powershell，运行以下命令：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install -r requirements.txt</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
 <p>若不能识别pip试试以下语句</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python -m pip install -r requirements.txt</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
 <p>还不行的话以管理员身份打开命令行窗口或者powershell再尝试。</p>
 <h4><span id="连接手机">连接手机</span></h4><p>打开手机的USB调试，以内置光盘的方式连接电脑。<code>Windows</code>键加<code>R</code>键运行<code>cmd</code>，打开命令行窗口，执行<code>adb devices</code>命令。如果看到有设备连接表示已成功。这时候设备的状态可能还是下面这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">List of devices attached</div><div class="line">XXXXXXXX               unauthorized</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List of devices attached</span><br><span class="line">XXXXXXXX               unauthorized</span><br></pre></td></tr></table></figure>
 <p>只要在手机端弹出的窗口中授权即可，注意勾选一直授权。这时候再次执行<code>adb devices</code>命令，变成如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">List of devices attached</div><div class="line">XXXXXXXX               device</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List of devices attached</span><br><span class="line">XXXXXXXX               device</span><br></pre></td></tr></table></figure>
 <p>进行usb调试的方法，不同手机不尽相同，如果ADB没有发现你的设备，请自行百度原因。</p>
 <h4><span id="运行程序">运行程序</span></h4><p>在解压目录中运行.exe文件，例如<code>stop_jump1_1_2.exe</code>。如果提示请安装ADB并配置环境变量（大概由于adb版本不兼容），尝试将解压目录中的<code>adb.exe</code>文件删除（任务管理器中结束它的进程再删除），并找到ADB安装目录中的<code>adb.exe</code>复制进解压目录。重新运行即可。如果看到如下内容，大功告成。</p>
 <p><img src="/images/stop_jump.PNG" width="500px"></p>

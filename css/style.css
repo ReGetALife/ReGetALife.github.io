@@ -138,9 +138,9 @@ code {
   background-color: #f8f8f8;
 }
 .outer {
-  max-width: 1320px;
+  max-width: 1460px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 .outer:before,
 .outer:after {
@@ -185,16 +185,16 @@ code {
   #main {
     display: inline;
     float: left;
-    width: 52.307692307692314%;
-    margin: 0 0.769230769230769%;
+    width: 59.44055944055944%;
+    margin: 0 1.048951048951049%;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1199px) {
   #main {
     display: inline;
     float: left;
-    width: 67.6923076923077%;
-    margin: 0 0.769230769230769%;
+    width: 67.13286713286713%;
+    margin: 0 1.048951048951049%;
   }
 }
 @media screen and (min-width: 560px) and (max-width: 799px) {
@@ -642,8 +642,8 @@ code {
 #profile {
   display: inline;
   float: left;
-  width: 21.53846153846154%;
-  margin: 0 0.769230769230769%;
+  width: 20.97902097902098%;
+  margin: 0 1.048951048951049%;
   display: none;
 }
 @media screen and (min-width: 1200px) {
@@ -1702,16 +1702,16 @@ ol.toc {
   #sidebar {
     display: inline;
     float: left;
-    width: 21.53846153846154%;
-    margin: 0 0.769230769230769%;
+    width: 13.286713286713287%;
+    margin: 0 1.048951048951049%;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1199px) {
   #sidebar {
     display: inline;
     float: left;
-    width: 29.230769230769234%;
-    margin: 0 0.769230769230769%;
+    width: 28.671328671328673%;
+    margin: 0 1.048951048951049%;
   }
 }
 .widget {

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://solidays.tk/"/>
-  <updated>2019-04-10T12:32:39.433Z</updated>
+  <updated>2019-04-11T06:27:17.317Z</updated>
   <id>http://solidays.tk/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://solidays.tk/2019/04/10/Building-a-RESTful-Web-Service-with-Spring/"/>
     <id>http://solidays.tk/2019/04/10/Building-a-RESTful-Web-Service-with-Spring/</id>
     <published>2019-04-10T09:33:06.000Z</published>
-    <updated>2019-04-10T12:32:39.433Z</updated>
+    <updated>2019-04-11T06:27:17.317Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h3><span id="使用spring构建restful的web服务">使用Spring构建RESTful的Web服务</span></h3><h4><span id="目标">目标</span></h4><p>构建一个可以接受http请求的API。</p>
 <a id="more"></a>

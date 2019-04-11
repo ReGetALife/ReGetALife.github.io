@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang=zh>
-<head>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     
     <title>Add Donation to your Site | Solidays</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="如何给自己的网站添加打赏😆">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
@@ -22,11 +22,11 @@
     
 
     
-        <link rel="alternate" href="atom.xml" title="Solidays" type="application/atom+xml" />
+        <link rel="alternate" href="atom.xml" title="Solidays" type="application/atom+xml">
     
 
     
-        <link rel="icon" href="/favicon1.ico" />
+        <link rel="icon" href="/favicon1.ico">
     
 
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
@@ -84,7 +84,7 @@ var _hmt = _hmt || [];
 </head>
 
 
-
+</html>
 <body>
     <div id="container">
         <header id="header">
@@ -116,7 +116,7 @@ var _hmt = _hmt || [];
                 <nav id="sub-nav">
                     <div class="profile" id="profile-nav">
                         <a id="profile-anchor" href="javascript:;">
-                            <img class="avatar" src="https://solidays-1252908379.cosgz.myqcloud.com/images/avatar1.jpg" />
+                            <img class="avatar" src="https://solidays-1252908379.cosgz.myqcloud.com/images/avatar1.jpg">
                             <i class="fa fa-caret-down"></i>
                         </a>
                     </div>
@@ -125,14 +125,14 @@ var _hmt = _hmt || [];
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜一搜" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜一搜">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="🔎查找站内资源￣ω￣=" />
+            <input type="text" class="ins-search-input" placeholder="🔎查找站内资源￣ω￣=">
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="搜一搜" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜一搜">
     </div>
 
                 </td>
@@ -198,7 +198,7 @@ var _hmt = _hmt || [];
 <aside id="profile">
     <div class="inner profile-inner">
         <div class="base-info profile-block">
-            <img id="avatar" src="https://solidays-1252908379.cosgz.myqcloud.com/images/avatar1.jpg" />
+            <img id="avatar" src="https://solidays-1252908379.cosgz.myqcloud.com/images/avatar1.jpg">
             <h2 id="name">🍉🍗🍬👦👧🍭🍖🍓</h2>
             <br>
 
@@ -221,7 +221,7 @@ cc.innerHTML = day1+"天"+hour+"小时"+minute+"分"+second+"秒";
 } 
 window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval); 
 </script> 
-             <center><i class="fa fa-clock-o fa-lg"></i> <span  id="divdown1"></span></center>
+             <center><i class="fa fa-clock-o fa-lg"></i> <span id="divdown1"></span></center>
 <br>
 
 
@@ -256,19 +256,19 @@ window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval);
                     
                     
                     <td>
-                        <a href="https://github.com/ReGetALife/" target="_blank" title="github" class=tooltip>
+                        <a href="https://github.com/ReGetALife/" target="_blank" title="github" class="tooltip">
                             <i class="fa fa-github"></i>
                         </a>
                     </td>
                     
                     <td>
-                        <a href="mailto:regetalife@foxmail.com" target="_blank" title="envelope" class=tooltip>
+                        <a href="mailto:regetalife@foxmail.com" target="_blank" title="envelope" class="tooltip">
                             <i class="fa fa-envelope"></i>
                         </a>
                     </td>
                     
                     <td>
-                        <a href="/atom.xml" target="_blank" title="rss" class=tooltip>
+                        <a href="/atom.xml" target="_blank" title="rss" class="tooltip">
                             <i class="fa fa-rss"></i>
                         </a>
                     </td>
@@ -278,33 +278,28 @@ window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval);
         </div>
         
 
-<div id="player1" class="aplayer"></div>
+<div id="player1" class="aplayer" style="margin:auto"></div>
 
     </div>
 
 </aside>
 
-<script src="/assets/js/APlayer.min.js"> </script>
-<script src="dist/APlayer.min.js"></script><!-- use your path -->
+<script src="/libs/aplayer/dist/APlayer.min.js"> </script>
+<link rel="stylesheet" href="/libs/aplayer/dist/APlayer.min.css">
 <script>
 var ap = new APlayer({
-    element: document.getElementById('player1'),                       // Optional, player element
-    narrow: false,                                                     // Optional, narrow style
+    container: document.getElementById('player1'),                       // Optional, player element
     autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
     showlrc: 3,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
     mutex: true,                                                       // Optional, pause other players when this player playing
     theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
-    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+    order: 'list',                                                    // 音频循环顺序, 可选值: 'list', 'random'
     preload: 'none',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
-    listmaxheight: '513px',                                             // Optional, max height of play list
-    music: [
-    {                                          
-        title: '人情世故',                            
-        author: '杨千嬅',             
-        url: 'https://solidays-1252908379.cosgz.myqcloud.com/%E4%BA%BA%E6%83%85%E4%B8%96%E6%95%85.mp3', 
-        pic: '/music/人情世故.jpg',
-        lrc: '/music/人情世故.lrc'
-    },
+    listmaxheight: '513px',                                         // Optional, max height of play list
+    listFolded: false,
+    fixed: false,
+    loop: 'all',
+    audio: [
     {                                          
         title: '沙龙',                            
         author: '陈奕迅',             
@@ -318,6 +313,13 @@ var ap = new APlayer({
         url: "https://solidays-1252908379.cosgz.myqcloud.com/I%27m%20A%20Realist-The%20Cribs.mp3",
         pic: "/music/Im A Realist.jpg",
         lrc: "/music/I'm A Realist.lrc"
+    },
+    {                                          
+        title: '人情世故',                            
+        author: '杨千嬅',             
+        url: 'https://solidays-1252908379.cosgz.myqcloud.com/%E4%BA%BA%E6%83%85%E4%B8%96%E6%95%85.mp3', 
+        pic: '/music/人情世故.jpg',
+        lrc: '/music/人情世故.lrc'
     },
     {                                          
         title: 'Victory Rose',                            
@@ -335,7 +337,6 @@ var ap = new APlayer({
     }
     ]
 });
-var ap = new APlayer(option);
 </script>
             
             <section id="main"><article id="post-Add-Donation-to-your-Site" class="article article-type-post" itemscope itemprop="blogPost">
@@ -599,19 +600,9 @@ var ap = new APlayer(option);
     <div class="widget-wrap">
         <h3 class="widget-title">最近更新</h3>
         <div class="widget">
-            <ul id="recent-post" class="">
+            <ul id="recent-post" class="no-thumbnail">
                 
                     <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/04/10/Building-a-RESTful-Web-Service-with-Spring/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/软件开发/">软件开发</a></p>
@@ -622,16 +613,6 @@ var ap = new APlayer(option);
                 
                     <li>
                         
-                        <div class="item-thumbnail">
-                            <a href="/2019/04/08/win10-system-high-CPU-usage/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
                             <p class="item-title"><a href="/2019/04/08/win10-system-high-CPU-usage/" class="title">win10 system high CPU usage</a></p>
@@ -640,16 +621,6 @@ var ap = new APlayer(option);
                     </li>
                 
                     <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2019/04/02/Permission-denied-publickey/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/gitssh.jpg)" alt="Permission denied (publickey)" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
@@ -660,16 +631,6 @@ var ap = new APlayer(option);
                 
                     <li>
                         
-                        <div class="item-thumbnail">
-                            <a href="/2018/05/14/Use-your-Chrome-to-visit-Google/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/googleVisit.png)" alt="Use your Chrome to visit Google" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
                             <p class="item-title"><a href="/2018/05/14/Use-your-Chrome-to-visit-Google/" class="title">Use your Chrome to visit Google</a></p>
@@ -678,16 +639,6 @@ var ap = new APlayer(option);
                     </li>
                 
                     <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/05/12/SSL-supported/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/SSL.png)" alt="SSL supported" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Note/">Note</a></p>
@@ -730,18 +681,6 @@ var ap = new APlayer(option);
                 
                     <li>
                         <a href="https://tongji.baidu.com/web/24274363/homepage/index">百度统计</a>
-                    </li>
-                
-                    <li>
-                        <a href="https://www.yyyweb.com/front">前端里</a>
-                    </li>
-                
-                    <li>
-                        <a href="https://www.quora.com/">Quora</a>
-                    </li>
-                
-                    <li>
-                        <a href="https://www.axios.com/">Axios</a>
                     </li>
                 
             </ul>

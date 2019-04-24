@@ -1,0 +1,87 @@
+body{
+    background: #f5f8f9;
+    font-family: Microsoft YaHei;
+    margin: 0;
+}
+a{
+    color: rgba(40, 69, 177, 0.796);
+    text-decoration: none;
+}
+a:hover {
+    color: #38b7ea;
+}
+#vue-app{
+    padding: 0;
+    margin: 0;
+}
+#top{
+    width:100%;
+    background: #fff;
+}
+#logo{
+    margin: 20px 15% 20px 10%;
+    font-weight: bold;
+    display:inline-block;
+    text-align: left;
+    font-size: 30px;
+}
+#search{
+    width: 30%;
+    display:inline-block;
+    text-align: left;
+}
+#myInput {
+    background-image: url('./searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%; 
+    font-size: 16px;
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd; 
+}
+#content{
+    width: 50%; 
+    margin: 0% 0% 0% 12%;
+    display:inline-block;
+    padding: 20px;
+}
+#statistic{
+    width: 20%;
+    display:inline-block;
+    vertical-align: top;
+    margin: 25px;
+    padding: 20px;
+    background: #fff;
+    color: #666;
+}
+.item>*{
+    color: #666;
+    background: #fff;
+    padding: 10px;
+}
+.item a{
+    font-size: 18px;
+}
+#list{
+    border-collapse:separate; 
+    border-spacing:0px 5px; 
+}
+#list>*{
+    height: 120px;
+}
+#page{
+    width: 80%;
+    margin:  10px 10% 0 10%;
+}
+#page * {
+    font-size: 18px;
+    line-height: 36px;
+    height: 36px;
+}
+#page a{
+    opacity: 0.8;
+}
+.rate{
+    font-size: 20px;
+    color: rgb(230, 17, 17);
+}

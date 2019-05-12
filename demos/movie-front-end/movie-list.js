@@ -63,7 +63,7 @@ function startSearch() {
 //渲染列表
 function showList(pageNum) {
     var searchKey = getUrlPrams()['key'] == undefined ? '' : getUrlPrams()['key'];
-    $.ajax('http://139.199.75.41:1024/movies?key=' + searchKey + '&page=' + pageNum, {
+    $.ajax('//139.199.75.41:1024/movies?key=' + searchKey + '&page=' + pageNum, {
         dataType: 'json'
     }).done(function (data) {
         $('#list').empty();
@@ -91,7 +91,7 @@ function statistic() {
     </div>
     `)
     //进行统计
-    $.ajax('http://139.199.75.41:1024/statistics', {
+    $.ajax('//139.199.75.41:1024/statistics', {
         dataType: 'json'
     }).done(function (data) {
         data.sort(function(x,y){return y.value - x.value});
@@ -119,7 +119,7 @@ $(document).ready(function () {
     statistic();
     showList(1);
     var searchKey = getUrlPrams()['key'] == undefined ? '' : getUrlPrams()['key'];
-    $.ajax('http://139.199.75.41:1024/movies?key=' + searchKey, {  //初始化分页
+    $.ajax('//139.199.75.41:1024/movies?key=' + searchKey, {  //初始化分页
         dataType: 'json'
     }).done(function (data) {
         //分页组件

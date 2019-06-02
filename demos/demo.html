@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        function login() {
+            var acc = document.getElementById("account").value
+            var pass = document.getElementById("password").value
+            $.ajax({
+                url: "http://localhost:8080/login",
+                type: "post",
+                contentType: "application/json",
+                dataType: "text",
+                data: JSON.stringify({
+                    account: acc,
+                    password: pass
+                }),
+            }).done(function (data) {
+                console.log("login", data)
+                document.getElementById("profile").innerHTML = "login as " + acc
+                document.getElementById("login").style = "display: none"
+                document.getElementById("main").style = "display: block"
+            }).fail(function (xhr, status) {
+                console.log('失败: ' + xhr.status + ', 原因: ' + status);
+            });
+            return false
+        }
+        function exec() {
+            var cmd = document.getElementById("command").value
+            $.ajax({
+                url: "http://localhost:8080/racf",
+                type: "put",
+                contentType: "text/plain",
+                dataType: "text",
+                data: cmd,
+            }).done(function (data) {
+                document.getElementById("output").innerHTML = data
+            }).fail(function (xhr, status) {
+                console.log('失败: ' + xhr.status + ', 原因: ' + status);
+            });
+            return false
+        }
+    </script>
+</head>
+
+<body>
+    登录<br>
+    Path: /login<br>
+    Method: POST <br>
+    Request Body: {"account":"xxxxx","password":"xxxxx"}<br>
+    Response status: 200 成功, 401 账号密码错误<br><br>
+    提交执行racf命令<br>
+    Path: /racf<br>
+    Method: PUT<br>
+    Request Body: 一行racf命令<br>
+    Response status: 200 成功并返回执行结果, 401 未登录, 202执行超时<br><br>
+    <form onsubmit="return login()" id="login">
+        账号：<input type="text" id="account"> 密码：<input type="password" id="password"> <button>登录</button>
+    </form>
+    <div id="main" style="display: none">
+        <div id="profile"></div><br>
+        <form onsubmit="return exec()">racf 命令：<input type="text" id="command"> <button>执行</button></form>
+        <div id="output"></div>
+    </div>
+</body>
+
+</html>

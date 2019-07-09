@@ -233,11 +233,11 @@ window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval);
 
         <div class="article-info profile-block">
             <div class="article-info-block">
-                12
+                14
                 <span> <i class="fa fa-file-text-o"></i> 文章</span>
             </div>
             <div class="article-info-block">
-                14
+                15
                 <span> <i class="fa fa-tags"></i> 标签</span>
             </div>
         </div>
@@ -382,16 +382,19 @@ var ap = new APlayer({
         <div class="article-entry" itemprop="articleBody">
         
             
-            <script src="/assets/js/APlayer.min.js"> </script><h3><span id="如何给自己的网站添加打赏">如何给自己的网站添加打赏😆</span></h3><a id="more"></a>
+            <h3><span id="如何给自己的网站添加打赏">如何给自己的网站添加打赏😆</span></h3><a id="more"></a>
+
 <p>许多的原创内容的网站尤其是博客都有打赏的功能，下面介绍如何添加简单的打赏按钮<br>借助hexo建站的网站，并且使用的是NexT主题，主题本身已经自带了打赏功能，参照主题文档开启即可，不再赘述。</p>
 <p>其他网站仅需简单两步即可引入打赏：</p>
 <ul>
 <li><p>在文章布局的尾部插入如下代码块(hexo中直接添加进/blog/themes/…/layout/…/article.ejs文件中)</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"padding: 10px 0; margin: 20px auto; width: 90%; text-align: center"</span>&gt;</span></span><br><span class="line">     </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>您的支持将鼓励我继续创作！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"rewardButton"</span> <span class="attr">onclick</span>=<span class="string">"var qr = document.getElementById('QR'); if (qr.style.display === 'none') &#123;qr.style.display='block';&#125; else &#123;qr.style.display='none'&#125;"</span> <span class="attr">disable</span>=<span class="string">"enable"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"按钮图片路径"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"QR"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display: inline-block"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"支付宝收款二维码路径"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>支付宝打赏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display: inline-block"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"微信收款二维码路径"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>微信打赏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display: inline-block"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"QQ收款二维码路径"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>QQ打赏<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>​</p>
 </li>
 <li><p>引入简单的样式文件(hexo中可直接加进/blog/themes/…/layout/…/article.ejs文件末尾)</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">#rewardButton &#123;</span></span><br><span class="line"><span class="undefined">	width: 40px;</span></span><br><span class="line"><span class="undefined">	height: 40px;</span></span><br><span class="line"><span class="undefined">	cursor: pointer;</span></span><br><span class="line"><span class="undefined">	border: 0;</span></span><br><span class="line"><span class="undefined">	outline: 0;</span></span><br><span class="line"><span class="undefined">	border-radius: 100%;</span></span><br><span class="line"><span class="undefined">	padding: 0;</span></span><br><span class="line"><span class="undefined">	margin: 0;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">#QR &#123;</span></span><br><span class="line"><span class="undefined">	padding-top: 20px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">#QR img &#123;</span></span><br><span class="line"><span class="undefined">	width: 120px;</span></span><br><span class="line"><span class="undefined">        max-width: 100%;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        margin: .8em 2em 0;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">#rewardButton img &#123;</span></span><br><span class="line"><span class="undefined">	display: inline-block;</span></span><br><span class="line"><span class="undefined">	width: 40px;</span></span><br><span class="line"><span class="undefined">	height: 40px;</span></span><br><span class="line"><span class="undefined">	border-radius: 5px;</span></span><br><span class="line"><span class="undefined">	background: #b9dff3;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">#rewardButton img:hover &#123;</span></span><br><span class="line"><span class="undefined">	background: #f39a75;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>​</p>
 </li>
 </ul>
@@ -597,6 +600,24 @@ var ap = new APlayer({
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+                            <p class="item-title"><a href="/2019/06/24/An-Attack-on-Mongodb/" class="title">An Attack on Mongodb</a></p>
+                            <p class="item-date"><time datetime="2019-06-24T09:09:44.000Z" itemprop="datePublished">2019-06-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+                            <p class="item-title"><a href="/2019/06/12/run-interactive-python-or-node-js-programs-in-git-bash/" class="title">run interactive python or node.js programs in git bash</a></p>
+                            <p class="item-date"><time datetime="2019-06-12T04:46:27.000Z" itemprop="datePublished">2019-06-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/ML/">ML</a></p>
                             <p class="item-title"><a href="/2019/05/16/build-tensorflow-gpu-from-source-on-win10/" class="title">Build TensorFlow-GPU from Source on Win10</a></p>
                             <p class="item-date"><time datetime="2019-05-16T06:23:31.000Z" itemprop="datePublished">2019-05-16</time></p>
@@ -621,24 +642,6 @@ var ap = new APlayer({
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
-                            <p class="item-title"><a href="/2019/04/02/Permission-denied-publickey/" class="title">Permission denied (publickey)</a></p>
-                            <p class="item-date"><time datetime="2019-04-02T11:45:12.000Z" itemprop="datePublished">2019-04-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
-                            <p class="item-title"><a href="/2018/05/14/Use-your-Chrome-to-visit-Google/" class="title">Use your Chrome to visit Google</a></p>
-                            <p class="item-date"><time datetime="2018-05-13T16:28:26.000Z" itemprop="datePublished">2018-05-14</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -648,7 +651,7 @@ var ap = new APlayer({
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/SSL/" style="font-size: 10px;">SSL</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/TF-GPU/" style="font-size: 10px;">TF GPU</a> <a href="/tags/emoji/" style="font-size: 10px;">emoji</a> <a href="/tags/example/" style="font-size: 10px;">example</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/云存储/" style="font-size: 10px;">云存储</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/科学上网/" style="font-size: 10px;">科学上网</a> <a href="/tags/跳一跳/" style="font-size: 10px;">跳一跳</a>
+            <a href="/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/SSL/" style="font-size: 10px;">SSL</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/TF-GPU/" style="font-size: 10px;">TF GPU</a> <a href="/tags/emoji/" style="font-size: 10px;">emoji</a> <a href="/tags/example/" style="font-size: 10px;">example</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/云存储/" style="font-size: 10px;">云存储</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/科学上网/" style="font-size: 10px;">科学上网</a> <a href="/tags/跳一跳/" style="font-size: 10px;">跳一跳</a>
         </div>
     </div>
 

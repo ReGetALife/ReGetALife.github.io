@@ -3,18 +3,21 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     
-    <title>标签: 跳一跳 | Solidays</title>
+    <title>run interactive python or node.js programs in git bash | Solidays</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Blog by GetALife">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Solidays">
-<meta property="og:url" content="http://solidays.tk/tags/跳一跳/index.html">
+    <meta name="description" content="在 Windows git bash 中运行交互式的 python 或 node.js 应用今天在使用 gitmoji 时发现，使用方向键来切换选项是无效的，并且还有许多显示上的问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="run interactive python or node.js programs in git bash">
+<meta property="og:url" content="http://solidays.tk/2019/06/12/run-interactive-python-or-node-js-programs-in-git-bash/index.html">
 <meta property="og:site_name" content="Solidays">
-<meta property="og:description" content="Blog by GetALife">
+<meta property="og:description" content="在 Windows git bash 中运行交互式的 python 或 node.js 应用今天在使用 gitmoji 时发现，使用方向键来切换选项是无效的，并且还有许多显示上的问题。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://solidays.tk/2019/06/12/run-interactive-python-or-node-js-programs-in-git-bash/Git">
+<meta property="og:updated_time" content="2019-07-09T07:12:09.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Solidays">
-<meta name="twitter:description" content="Blog by GetALife">
+<meta name="twitter:title" content="run interactive python or node.js programs in git bash">
+<meta name="twitter:description" content="在 Windows git bash 中运行交互式的 python 或 node.js 应用今天在使用 gitmoji 时发现，使用方向键来切换选项是无效的，并且还有许多显示上的问题。">
+<meta name="twitter:image" content="http://solidays.tk/2019/06/12/run-interactive-python-or-node-js-programs-in-git-bash/Git">
     
 
     
@@ -327,50 +330,251 @@ var ap = new APlayer({
 });
 </script>
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-tag"></i></span>
-        <h1 class="title">#跳一跳</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-run-interactive-python-or-node-js-programs-in-git-bash" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/">How to Win Your Friends in Wechat Jump</a>
+        <h1 class="article-title" itemprop="name">
+            run interactive python or node.js programs in git bash
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/01/16/How-to-Win-Your-Friends-in-Wechat-Jump/">
-            <time datetime="2018-01-16T14:37:31.000Z" itemprop="datePublished">2018-01-16</time>
+        <a href="/2019/06/12/run-interactive-python-or-node-js-programs-in-git-bash/">
+            <time datetime="2019-06-12T04:46:27.000Z" itemprop="datePublished">2019-06-12</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/Misc/">Misc</a>
     </div>
 
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/跳一跳/">跳一跳</a>
+                        
+
+                        
+                           <span id="busuanzi_container_page_pv">
+                               <i class="fa fa-eye"></i>
+                           <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                        
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h3><span id="在-windows-git-bash-中运行交互式的-python-或-nodejs-应用">在 Windows git bash 中运行交互式的 python 或 node.js 应用</span></h3><p>今天在使用 gitmoji 时发现，使用方向键来切换选项是无效的，并且还有许多显示上的问题。</p>
+<a id="more"></a>
+
+<p>其实，在一开始安装 git 的时候，有一个步骤是选择使用 MinTTY 终端还是 Windows 原生的终端（也就是 cmd )。而我恰好选择了 MinTTY 。</p>
+<p>然而，MinTTY 不支持交互操作 :)</p>
+<p>解决方法：可以通过 winpty 提供的接口来实现交互操作。</p>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ winpty python</span><br><span class="line">$ winpty npm.cmd install</span><br><span class="line">$ winpty gitmoji.cmd -c</span><br></pre></td></tr></table></figure>
+
+<p>参考：<br><a href="https://www.zhihu.com/question/36142943" target="_blank" rel="noopener">https://www.zhihu.com/question/36142943</a><br><a href="https://stackoverflow.com/questions/54588898/how-to-run-npm-scripts-with-winpty" target="_blank" rel="noopener">https://stackoverflow.com/questions/54588898/how-to-run-npm-scripts-with-winpty</a></p>
+<p>后续：</p>
+<p>Windows 终端对 emoji 的支持是有问题的，大多数 emoji 都无法正确显示 orz<br>建议把 Windows 升级到 1903 版本，安装全新的 Windows Terminal ，美滋滋。</p>
+
+        
+        </div>
+
+        
+            <footer class="article-footer">
+                <div class="share-container">
+
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">分享到</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_sina_weibo"></a>
+    <a class="a2a_button_wechat"></a>
+    <a class="a2a_button_douban"></a>
+    <a class="a2a_button_qzone"></a>
+    <a class="a2a_button_renren"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_button_email"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+</div>
+
+            </footer>
+        
     </div>
 
+
+
+
+
+
+    
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+     
+            <div>您的支持将鼓励我继续创作！</div>
+ <br>   
+            <button id="rewardButton" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" disable="enable">
+
+               <img src="/css/images/赏.png">
+            </button>
+            <div id="QR" style="display: none;">
+                <div style="display: inline-block">
+                    <img src="/css/images/zhifubao.jpg">
+                    <p>支付宝打赏</p>
+                </div>
+                <div style="display: inline-block">
+                    <img src="/css/images/weixin.jpg">
+                    <p>微信打赏</p>
+                </div>
+
+                <div style="display: inline-block">
+                    <img src="/css/images/qq.jpg">
+                    <p>QQ打赏</p>
                 </div>
             </div>
         </div>
     
-</div>
+      
+        
+                 
+
+
+
+
+
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/06/24/An-Attack-on-Mongodb/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    An Attack on Mongodb
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2019/05/16/build-tensorflow-gpu-from-source-on-win10/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Build TensorFlow-GPU from Source on Win10</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+	<div id="gitalk-container"></div>
+</section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+#rewardButton {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0;
+}
+#QR {
+	padding-top: 20px;
+}
+
+#QR img {
+	width: 120px;
+        max-width: 100%;
+
+        margin: .8em 2em 0;
+}
+#rewardButton img {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	background: #b9dff3;
+}
+#rewardButton img:hover {
+	background: #f39a75;
+}
+</style>
+
 </section>
             
                 

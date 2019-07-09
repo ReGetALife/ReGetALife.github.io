@@ -231,11 +231,11 @@ window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval);
 
         <div class="article-info profile-block">
             <div class="article-info-block">
-                12
+                14
                 <span> <i class="fa fa-file-text-o"></i> 文章</span>
             </div>
             <div class="article-info-block">
-                14
+                15
                 <span> <i class="fa fa-tags"></i> 标签</span>
             </div>
         </div>
@@ -380,12 +380,15 @@ var ap = new APlayer({
         <div class="article-entry" itemprop="articleBody">
         
             
-            <script src="/assets/js/APlayer.min.js"> </script><h3><span id="使用spring构建restful的web服务">使用Spring构建RESTful的Web服务</span></h3><h4><span id="目标">目标</span></h4><p>构建一个可以接受http请求的API。</p>
+            <h3><span id="使用spring构建restful的web服务">使用Spring构建RESTful的Web服务</span></h3><h4><span id="目标">目标</span></h4><p>构建一个可以接受http请求的API。</p>
 <a id="more"></a>
+
 <p>这个API看起来是这样的，访问<code>http://localhost:8080/greeting</code>，返回</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"id"</span>:<span class="number">1</span>,<span class="attr">"content"</span>:<span class="string">"Hello, World!"</span>&#125;</span><br></pre></td></tr></table></figure>
+
 <p>或者带上参数<code>http://localhost:8080/greeting?name=User</code>，返回</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"id"</span>:<span class="number">1</span>,<span class="attr">"content"</span>:<span class="string">"Hello, User!"</span>&#125;</span><br></pre></td></tr></table></figure>
+
 <h4><span id="准备">准备</span></h4><ul>
 <li>Java8或更高。</li>
 <li>maven3.2或更高</li>
@@ -394,11 +397,16 @@ var ap = new APlayer({
 </ul>
 <h4><span id="操作">操作</span></h4><p><a href="https://github.com/spring-guides/gs-rest-service/archive/master.zip" target="_blank" rel="noopener">下载</a>样例源码，或者使用git clone到本地：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/spring-guides/gs-rest-service.git</span><br></pre></td></tr></table></figure>
+
 <p>然后进入到<code>initial</code>文件夹下，之后的所有操作以该文件夹为工作目录。</p>
 <p><strong>创建资源类</strong></p>
-<p>新建<code>src/main/java/hello/Greeting.java</code>文件：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> hello;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">long</span> id;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String content;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Greeting</span><span class="params">(<span class="keyword">long</span> id, String content)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.content = content;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getContent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> content;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>新建<code>src/main/java/hello/Greeting.java</code>文件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> hello;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">long</span> id;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String content;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Greeting</span><span class="params">(<span class="keyword">long</span> id, String content)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.content = content;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getContent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> content;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><strong>创建控制类</strong></p>
-<p>新建<code>src/main/java/hello/GreetingController.java</code>文件：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> hello;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.atomic.AtomicLong;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GreetingController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String template = <span class="string">"Hello, %s!"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AtomicLong counter = <span class="keyword">new</span> AtomicLong();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/greeting"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Greeting <span class="title">greeting</span><span class="params">(@RequestParam(value=<span class="string">"name"</span>, defaultValue=<span class="string">"World"</span>)</span> String name) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Greeting(counter.incrementAndGet(),</span><br><span class="line">                            String.format(template, name));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>新建<code>src/main/java/hello/GreetingController.java</code>文件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> hello;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.atomic.AtomicLong;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GreetingController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String template = <span class="string">"Hello, %s!"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AtomicLong counter = <span class="keyword">new</span> AtomicLong();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/greeting"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Greeting <span class="title">greeting</span><span class="params">(@RequestParam(value=<span class="string">"name"</span>, defaultValue=<span class="string">"World"</span>)</span> String name) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Greeting(counter.incrementAndGet(),</span><br><span class="line">                            String.format(template, name));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>控制类用于处理HTTP请求。</p>
 <ul>
 <li><code>@RestController</code>注释表明这是一个控制类。</li>
@@ -411,6 +419,7 @@ var ap = new APlayer({
 <p><strong>添加main方法</strong></p>
 <p>新建<code>src/main/java/hello/Application.java</code>文件：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> hello;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(Application.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><code>@SpringBootApplication</code>注释相当于下列多个注释：</p>
 <ul>
 <li><code>@Configuration</code></li>
@@ -419,14 +428,22 @@ var ap = new APlayer({
 <li><code>@ComponentScan</code></li>
 </ul>
 <p><strong>运行</strong></p>
-<p>在工作目录下打开控制台窗口，运行：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn spring-boot:run</span><br></pre></td></tr></table></figure></p>
+<p>在工作目录下打开控制台窗口，运行：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn spring-boot:run</span><br></pre></td></tr></table></figure>
+
 <p>之后访问<code>http://localhost:8080/greeting</code>即可看到API返回的数据，也可以在查询中带上参数<code>name</code>。</p>
 <p>若要停止应用，按<code>Ctrl</code>+<code>C</code>（在git bash中失效）。</p>
 <p><strong>打包</strong></p>
-<p>在工作目录下打开控制台窗口，运行：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure></p>
+<p>在工作目录下打开控制台窗口，运行：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
+
 <p>可以将应用打包为jar包，保存在<code>target</code>目录下。</p>
-<p>以下命令可以查看jar包中都有什么：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar tvf target/gs-rest-service-<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>.jar</span><br></pre></td></tr></table></figure></p>
-<p>以下命令可以运行jar包：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar target/gs-rest-service-<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>.jar</span><br></pre></td></tr></table></figure></p>
+<p>以下命令可以查看jar包中都有什么：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar tvf target/gs-rest-service-<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>.jar</span><br></pre></td></tr></table></figure>
+
+<p>以下命令可以运行jar包：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar target/gs-rest-service-<span class="number">0</span>.<span class="number">1</span>.<span class="number">0</span>.jar</span><br></pre></td></tr></table></figure>
+
 <p>同样，若要停止应用，按<code>Ctrl</code>+<code>C</code>。</p>
 <h4><span id="使用intellij-idea">使用IntelliJ IDEA</span></h4><p>如果使用IntelliJ IDEA，它已经自带了maven和spring，可以直接在IDE界面中点击按钮运行或调试，并且可以通过图形界面将应用打包。</p>
 <h4><span id="参考">参考</span></h4><p><a href="https://spring.io/guides/gs/rest-service/" target="_blank" rel="noopener">Getting Started · Building a RESTful Web Service</a></p>
@@ -632,6 +649,24 @@ var ap = new APlayer({
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+                            <p class="item-title"><a href="/2019/06/24/An-Attack-on-Mongodb/" class="title">An Attack on Mongodb</a></p>
+                            <p class="item-date"><time datetime="2019-06-24T09:09:44.000Z" itemprop="datePublished">2019-06-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+                            <p class="item-title"><a href="/2019/06/12/run-interactive-python-or-node-js-programs-in-git-bash/" class="title">run interactive python or node.js programs in git bash</a></p>
+                            <p class="item-date"><time datetime="2019-06-12T04:46:27.000Z" itemprop="datePublished">2019-06-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/ML/">ML</a></p>
                             <p class="item-title"><a href="/2019/05/16/build-tensorflow-gpu-from-source-on-win10/" class="title">Build TensorFlow-GPU from Source on Win10</a></p>
                             <p class="item-date"><time datetime="2019-05-16T06:23:31.000Z" itemprop="datePublished">2019-05-16</time></p>
@@ -656,24 +691,6 @@ var ap = new APlayer({
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
-                            <p class="item-title"><a href="/2019/04/02/Permission-denied-publickey/" class="title">Permission denied (publickey)</a></p>
-                            <p class="item-date"><time datetime="2019-04-02T11:45:12.000Z" itemprop="datePublished">2019-04-02</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
-                            <p class="item-title"><a href="/2018/05/14/Use-your-Chrome-to-visit-Google/" class="title">Use your Chrome to visit Google</a></p>
-                            <p class="item-date"><time datetime="2018-05-13T16:28:26.000Z" itemprop="datePublished">2018-05-14</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -683,7 +700,7 @@ var ap = new APlayer({
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/SSL/" style="font-size: 10px;">SSL</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/TF-GPU/" style="font-size: 10px;">TF GPU</a> <a href="/tags/emoji/" style="font-size: 10px;">emoji</a> <a href="/tags/example/" style="font-size: 10px;">example</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/云存储/" style="font-size: 10px;">云存储</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/科学上网/" style="font-size: 10px;">科学上网</a> <a href="/tags/跳一跳/" style="font-size: 10px;">跳一跳</a>
+            <a href="/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Mongodb/" style="font-size: 10px;">Mongodb</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/SSL/" style="font-size: 10px;">SSL</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/TF-GPU/" style="font-size: 10px;">TF GPU</a> <a href="/tags/emoji/" style="font-size: 10px;">emoji</a> <a href="/tags/example/" style="font-size: 10px;">example</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/云存储/" style="font-size: 10px;">云存储</a> <a href="/tags/多线程/" style="font-size: 10px;">多线程</a> <a href="/tags/科学上网/" style="font-size: 10px;">科学上网</a> <a href="/tags/跳一跳/" style="font-size: 10px;">跳一跳</a>
         </div>
     </div>
 

@@ -1,0 +1,133 @@
+﻿<% var profile = theme.customize.profile; %>
+<% var tagCount = site.tags.filter(function(tag) { return tag.length; }).length; %>
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="<%= ( profile.gravatar ? gravatar(profile.gravatar, 128) : url_for(profile.avatar)) %>" />
+            <h2 id="name"><%= profile.author %></h2>
+            <br>
+
+
+<script language="javascript" type="text/javascript"> 
+var interval = 1000; 
+function ShowCountDown(year,month,day,divname) 
+{ 
+var now = new Date(); 
+var endDate = new Date(year, month-1, day); 
+var leftTime=now.getTime()-endDate.getTime(); 
+var leftsecond = parseInt(leftTime/1000); 
+//var day1=parseInt(leftsecond/(24*60*60*6)); 
+var day1=Math.floor(leftsecond/(60*60*24)); 
+var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+var cc = document.getElementById(divname); 
+cc.innerHTML = day1+"天"+hour+"小时"+minute+"分"+second+"秒";
+} 
+window.setInterval(function(){ShowCountDown(2017,2,9,'divdown1');}, interval); 
+</script> 
+             <center><i class="fa fa-clock-o fa-lg"></i> <span  id="divdown1"></span></center>
+<br>
+
+
+
+            <span id="location"><i class="fa fa-map-marker"></i><%= profile.location %></span>
+
+            <!--<a id="follow" target="_blank" href="<%= profile.follow %>"><%= __('profile.follow') %></a>-->
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                <%= site.posts.length %>
+                <span> <i class="fa fa-file-text-o"></i> <%= (site.posts.length > 1 ? __('profile.posts') : __('profile.post')) %></span>
+            </div>
+            <div class="article-info-block">
+                <%= tagCount %>
+                <span> <i class="fa fa-tags"></i> <%= (tagCount > 1 ? __('profile.tags') : __('profile.tag')) %></span>
+            </div>
+        </div>
+        <% if(theme.customize.social_links) { %>
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    <% var tooltipClass = theme.customize.social_link_tooltip === false ? '' : 'class=tooltip'; %>
+                    <% for(var i in theme.customize.social_links) { %>
+                    <td>
+                        <a href="<%- url_for(theme.customize.social_links[i]) %>" target="_blank" title="<%= i %>" <%= tooltipClass %>>
+                            <i class="fa fa-<%= i %>"></i>
+                        </a>
+                    </td>
+                    <% } %>
+                </tr>
+            </table>
+        </div>
+        <% } %>
+
+<div id="player1" class="aplayer" style="margin:auto"></div>
+
+    </div>
+
+</aside>
+
+<script src="/libs/aplayer/dist/APlayer.min.js"> </script>
+<link rel="stylesheet" href="/libs/aplayer/dist/APlayer.min.css">
+<script>
+var ap = new APlayer({
+    container: document.getElementById('player1'),                       // Optional, player element
+    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    showlrc: 3,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+    mutex: true,                                                       // Optional, pause other players when this player playing
+    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
+    order: 'list',                                                    // 音频循环顺序, 可选值: 'list', 'random'
+    preload: 'none',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    listmaxheight: '513px',                                         // Optional, max height of play list
+    listFolded: false,
+    fixed: false,
+    loop: 'all',
+    audio: [
+    {                                          
+        title: '沙龙',                            
+        author: '陈奕迅',             
+        url: 'https://solidays-1252908379.cosgz.myqcloud.com/%E6%B2%99%E9%BE%99.mp3', 
+        pic: '/music/沙龙.jpg',
+        lrc: '/music/沙龙.lrc'
+    },
+    {                                          
+        title: "I'm A Realist",                            
+        author: "The Cribs",             
+        url: "https://solidays-1252908379.cosgz.myqcloud.com/I%27m%20A%20Realist-The%20Cribs.mp3",
+        pic: "/music/Im A Realist.jpg",
+        lrc: "/music/I'm A Realist.lrc"
+    },
+    {                                          
+        title: '人情世故',                            
+        author: '杨千嬅',             
+        url: 'https://solidays-1252908379.cosgz.myqcloud.com/%E4%BA%BA%E6%83%85%E4%B8%96%E6%95%85.mp3', 
+        pic: '/music/人情世故.jpg',
+        lrc: '/music/人情世故.lrc'
+    },
+    {                                          
+        title: 'Victory Rose',                            
+        author: 'Lights & Motion',             
+        url: 'https://solidays-1252908379.cosgz.myqcloud.com/Victory%20Rose.mp3',
+        pic: '/music/纯音乐.jpg',
+        lrc: '/music/纯音乐.lrc'
+    },
+    {                                          
+        title: 'Sign of the Times',                            
+        author: 'Harry Styles',             
+        url: 'https://solidays-1252908379.cosgz.myqcloud.com/Sign%20Of%20The%20Times.mp3',
+        pic: '/music/Sign of the Times.jpg',
+        lrc: '/music/Sign of the Times.lrc'
+    }
+    ]
+});
+</script>

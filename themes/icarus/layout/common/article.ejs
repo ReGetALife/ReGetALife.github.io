@@ -1,0 +1,140 @@
+﻿<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        <% if (post.banner) { %>
+            <%- partial('post/banner') %>
+        <% } %>
+        <% if (post.link || post.title) { %>
+            <header class="article-header">
+                <%- partial('post/title', { class_name: 'article-title' }) %>
+                <% if (post.layout != 'page') { %>
+                    <div class="article-meta">
+                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+                        <%- partial('post/category') %>
+                        <%- partial('post/tag') %>
+
+                        <% if (!index) { %>
+                           <span id="busuanzi_container_page_pv">
+                               <i class="fa fa-eye"></i>
+                           <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                        <% } %>
+
+                    </div>
+                <% } %>
+            </header>
+        <% } %>
+        <%- partial('post/gallery') %>
+        <div class="article-entry" itemprop="articleBody">
+        <% if (index && post.excerpt) { %>
+            <p><%- post.excerpt %></p>
+            <p class="article-more-link">
+                <a href="<%- url_for(post.path) %>"><%= __('article.more') %></a>
+            </p>
+        <% } else { %>
+            <% if (!index && post.toc) { %>
+                <div id="toc" class="toc-article">
+                <strong class="toc-title"><%= __('article.catalogue') %></strong>
+                    <%- toc(post.content) %>
+                </div>
+            <% } %>
+            <%- post.content %>
+        <% } %>
+        </div>
+
+        <% if (!index && post.share) { %>
+            <footer class="article-footer">
+                <%- partial('share/index', { post: post }) %>
+            </footer>
+        <% } %>
+    </div>
+
+
+
+
+
+
+    <% if (!index && post.donate) { %>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+     
+            <div>您的支持将鼓励我继续创作！</div>
+ <br>   
+            <button id="rewardButton" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" disable="enable">
+
+               <img src="/css/images/赏.png">
+            </button>
+            <div id="QR" style="display: none;">
+                <div style="display: inline-block">
+                    <img src="/css/images/zhifubao.jpg">
+                    <p>支付宝打赏</p>
+                </div>
+                <div style="display: inline-block">
+                    <img src="/css/images/weixin.jpg">
+                    <p>微信打赏</p>
+                </div>
+
+                <div style="display: inline-block">
+                    <img src="/css/images/qq.jpg">
+                    <p>QQ打赏</p>
+                </div>
+            </div>
+        </div>
+    <% } %>
+      
+        
+                 
+
+
+
+
+
+    <% if (!index) { %>
+        <%- partial('post/nav') %>
+    <% } %>
+</article>
+
+<% if (!index && post.comment) { %>
+    <%- partial('comment/index') %>
+<% } %>
+
+
+
+
+
+
+
+
+
+
+<style>
+#rewardButton {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0;
+}
+#QR {
+	padding-top: 20px;
+}
+
+#QR img {
+	width: 120px;
+        max-width: 100%;
+
+        margin: .8em 2em 0;
+}
+#rewardButton img {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	background: #b9dff3;
+}
+#rewardButton img:hover {
+	background: #f39a75;
+}
+</style>
+

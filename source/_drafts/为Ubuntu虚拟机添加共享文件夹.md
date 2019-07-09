@@ -1,0 +1,10 @@
+---
+title: 为Ubuntu虚拟机添加共享文件夹
+tags:
+---
+
+The vmxnet driver is no longer supported on kernels 3.3 and greater. Please  upgrade to a newer virtual NIC. (e.g., vmxnet3 or e1000e)引http://notesofaprogrammer.blogspot.com/2015/09/vmware-tools-installer-complaining.html
+
+ 对于 Linux 客户机，无法从 UI 使用 e1000e（e1000、灵活型 vmxnet、增强型 vmxnet 和 vmxnet3 可用于 Linux）。引https://kb.vmware.com/s/article/1001805?lang=zh_CN
+
+ethernet0.virtualDev = "vmxnet3"

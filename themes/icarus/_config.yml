@@ -1,0 +1,94 @@
+﻿# Menus
+menu:
+  新站: https://solidays.cn
+  归档: archives
+  分类: categories
+  标签: tags
+  喵喵🐱: miao
+  游戏🎮: games
+
+# Customize
+customize:
+    logo:
+        enabled: true
+        width: 40
+        height: 40
+        url: images/logo.png
+    profile:
+        enabled: true # Whether to show profile bar
+        avatar: https://solidays-1252908379.cosgz.myqcloud.com/images/avatar1.jpg
+        gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+        author: 🍉🍗🍬👦👧🍭🍖🍓
+        author_title:
+        location: 上海, 中国
+        follow: https://github.com/ReGetALife/
+    highlight: xcode
+    sidebar: right # sidebar position, options: left, right or leave it empty
+    thumbnail: false # enable posts thumbnail, options: true, false
+    favicon: favicon1.ico # path to favicon
+    social_links:
+        github: https://github.com/ReGetALife/
+        #qq: qq
+        #weixin: weixin
+        envelope: mailto:regetalife@foxmail.com
+        rss: atom.xml
+    social_link_tooltip: true # enable the social link tooltip, options: true, false
+
+# Widgets
+widgets:
+    - recent_posts
+    #- category
+    #- archive
+    #- tag
+    - tagcloud
+    - links
+
+# Search
+search:
+    insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+    swiftype: # enter swiftype install key here
+    baidu: false # you need to disable other search engines to use Baidu search, options: true, false
+
+# Comment
+comment:
+    disqus: # hexo-theme-icarus enter disqus shortname here
+    duoshuo: # enter duoshuo shortname here
+    youyan: #2139913  enter youyan uid here
+    facebook: # enter true to enable
+    isso: # enter the domain name of your own comment isso server eg. comments.example.com
+    changyan: # please fill in `appid` and `conf` to enable
+        appid:
+        conf:
+    gitment:
+        owner: ReGetALife #your github ID
+        repo: ReGetALife.github.io #the repo to store comments
+        #see more in comment/gitment.ejs
+        #Register an OAuth application, and you will get a client ID and a client secret.
+        client_id: b44b6c8317da8cadf857 #your client ID
+        client_secret: 2cf75aec4ff84330e40cb28394e06764cb2e9742 #your client secret
+
+# Share
+share: addtoany # options: jiathis, bdshare, addtoany, default
+
+# Plugins
+plugins:
+    lightgallery: true # options: true, false
+    justifiedgallery: true # options: true, false
+    google_analytics: UA-103244385-1 # enter the tracking ID for your Google Analytics
+    google_site_verification: # enter Google site verification code
+    baidu_analytics: bcf7cd2574189a3d1456b8707833c280 # enter Baidu Analytics hash key
+    mathjax: true # options: true, false
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
+        Hexo: https://hexo.io
+        Github: https://github.com/
+        myqcloud: https://console.qcloud.com/cos
+        百度统计: https://tongji.baidu.com/web/24274363/homepage/index
+
